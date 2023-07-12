@@ -1,0 +1,74 @@
+3 MPI.processes
+3 OpenMP.threads
+STORAGE_DIR: workspace/
+
+print.detailed.information(no)
+dimensions.only(no)
+non.zero.NBMEs.proportion.only(no)
+interaction : FHT-COSM
+coupled.OBMEs.TBMEs.copied(no)
+pivot.from.file(no)
+full.common.vectors.used.in.file(no)
+basis potential(Berggren basis): WS-analytic
+
+OBMEs.interaction.read(no)
+no.TBMEs.read
+
+4 amu(frozen.core.mass)
+4 (A.core)
+2 (Z.core)
+
+pp (basis.space)
+pp (space)
+2 proton(s)[basis]
+2 proton(s)
+Coulomb.Hamiltonian(yes)
+1.00783 amu(proton.mass)
+h^2/2m[p]:20.7384250611379 MeV fm^2
+
+neutron.basis.potential(no)
+
+20 fm(rotation-point)
+100 fm(real.maximal.radius)
+80 points.before.R(Gauss.Legendre)
+80 points.after.R(Gauss.Legendre)
+600 points.before.R(uniform)
+600 points.after.R(uniform)
+1.681 fm(charge.radius)
+7.5 fm(cut.function.radius)
+1 fm(cut.function.diffuseness)
+
+5 fm^(-1)(k.max.momentum.space)
+15 fm(R.Fermi.function.momentum.space)
+80 points.before.k.max.momentum.space(Gauss.Legendre)
+600 points.before.k.max.momentum.space(uniform)
+
+3 proton.pole.state(s)
+0s1/2 HO.state(core.frozen) 
+0p3/2 S.matrix.pole  1 hw(truncation.energy) 
+0p1/2 S.matrix.pole  1 hw(truncation.energy) 
+
+0 proton.scattering.like.partial.wave(s)
+2 proton.contour(s)
+partial.wave   k.peak(fm^(-1)) k.middle(fm^(-1)) k.max(fm^(-1))   N.k.peak N.k.middle N.k.max   hw(truncation.energy)
+p3/2    (0.3,-0.3) (0.9,0) (4,0)   15 15 15   1
+p1/2    (0.3,-0.3) (0.9,0) (4,0)   15 15 15   1
+
+
+Hamiltonian potential for core: WS-analytic
+
+l   d(fm)   R0(fm)   Vo(MeV)   Vso(MeV)
+0   0.64   2.06   42.1   0
+1   0.64   2.06   42.1   11.1
+
+
+
+Basis potential: WS-analytic
+
+l   d(fm)   R0(fm)   Vo(MeV)   Vso(MeV)
+0   0.65   2.45   58.4   0
+1   0.65   2.45   58.4   12
+
+
+
+MPI process:0 Problem : truncation.hw(yes or no) [reference word] <--> 100.0 [read word].

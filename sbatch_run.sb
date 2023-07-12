@@ -1,73 +1,16 @@
 #!/bin/bash -login 
 #SBATCH --time=10:00:00 
-#SBATCH --ntasks=1
-#SBATCH --cpus-per-task=20
-#SBATCH --mem=50G 
-#SBATCH --array=0-520
-#SBATCH --qos=scavenger
-#SBATCH --no-requeue
-#SBATCH --output=slurm_summary_%A.out
-#SBATCH --error=slurm_summary_%A.error
-#SBATCH --job-name 6HeArray
+#SBATCH --ntasks=4
+#SBATCH --cpus-per-task=28
+#SBATCH --mem=100G 
+#SBATCH -A ptg
+#SBATCH --job-name GSM_UQ_test
 
 module purge
 module load GNU/7.3.0-2.30  
-module load OpenMPI/3.1.1 
+module load OpenMPI/3.1.1
+module load Python/3.7.0
 
-##################################################
-# Set number of tasks/nodes desired (to avoid manually adding it in every line)
-NODES=1
+python3 hpcc_emulation_run.py
 
-# Add in any file names you want to run in order of desired run order (be sure to copy the run line below)
-BergA5Name="Ex_III_9He_1I2-_"
-BergName="Ex_III_10He_0+_"
-NatOrbName="Ex_III_10He_0+_natural_orbital_"
-
-# Provide input and output paths
-INPath="$(pwd)/automated_inputs"
-OUTPath="automated_outputs"
-
-
-##################################################
-# If output folder is not made already, then create it
-if [ ! -d "$OUTPath" ]; then
-    mkdir "$OUTPath"
-fi
-# All array jobs will be stored in our automated outputs folder under the array ID number
-# Create folder if not already available
-if [ ! -d "$OUTPath/array_$SLURM_ARRAY_TASK_ID" ]; then
-    mkdir "$OUTPath/array_$SLURM_ARRAY_TASK_ID"
-fi
-# Each array folder will have a workspace directory with nodes (set above by "NODES")
-mkdir "$OUTPath/array_$SLURM_ARRAY_TASK_ID/workspace"
-for i in $(seq 0 $NODES); do
-    mkdir "$OUTPath/array_$SLURM_ARRAY_TASK_ID/workspace/node_$i"
-done
-# The workspace will be deleted after the completion of all scripts to reduce file volume
-
-
-##################################################
-# When running GSM code with any additional outputs (like density), it will place the files in the folder containing the GSM_exe executable.
-# Copy GSM_exe to each output file so we will have the outputs all in one spot
-cp GSM_two_exe "$OUTPath/array_$SLURM_ARRAY_TASK_ID"
-
-
-##################################################
-# Move to specific directory for array_ID
-cd "$OUTPath/array_$SLURM_ARRAY_TASK_ID"
-
-# Lines below run the main code for each array ID!
-mpirun -np $NODES -map-by node -bind-to none ./GSM_two_exe <"$INPath/$BergA5Name$SLURM_ARRAY_TASK_ID.in"> "$BergA5Name$SLURM_ARRAY_TASK_ID.out"
-
-mpirun -np $NODES -map-by node -bind-to none ./GSM_two_exe <"$INPath/$BergName$SLURM_ARRAY_TASK_ID.in"> "$BergName$SLURM_ARRAY_TASK_ID.out"
-
-mpirun -np $NODES -map-by node -bind-to none ./GSM_two_exe <"$INPath/$NatOrbName$SLURM_ARRAY_TASK_ID.in"> "$NatOrbName$SLURM_ARRAY_TASK_ID.out"
-
-
-##################################################
-# To avoid file overflow, remove workspace once completed!
-rm -r "workspace"
-rm "GSM_two_exe"
-
-# Uncomment if you'd like each job ID to be printed onto the slurm summary
-# scontrol show job $SLURM_JOB_ID
+scontrol show job $SLURM_JOB_ID
