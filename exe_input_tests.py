@@ -165,16 +165,16 @@ def toEandGamma(eTilde):
     # Returns Energy and Gamma given a complex energy \tilde{E}
     return np.real(eTilde), -2*np.imag(eTilde)
 
-def setup_gsm(theta,dirForWorkspace):
+def setup_gsm(theta,dirForWorkspace,templateNames):
     os.mkdir(dirForWorkspace)
     os.mkdir(os.path.join(dirForWorkspace,'workspace'))
     for i in range(gsmNodes):
         os.mkdir(os.path.join(dirForWorkspace,'workspace','node_'+str(i)))
     
     # Names of all template files you wish to use
-    templateNames = ['template_5He_Mao2020.temp','template_5Li_Mao2020.temp',
-                     'template_6Be_Mao2020.temp','template_6He_Mao2020.temp',
-                     'template_6Li_Mao2020.temp']
+    #templateNames = ['template_5He_Mao2020.temp','template_5Li_Mao2020.temp',
+    #                 'template_6Be_Mao2020.temp','template_6He_Mao2020.temp',
+    #                 'template_6Li_Mao2020.temp']
 
     # For all our input files given theta, set the proper parameters
     replaceDict = {"$GSM_NODES":gsmNodes, "$GSM_CPUS":gsmCPUs,
@@ -235,7 +235,8 @@ def model(x,params,templateNames_):
     for the observations
     """
     modelOut = np.zeros((params.shape[0],6))
-    
+
+    os.makedirs('test-runs',exist_ok=True)    
     currentDirs = sorted(os.listdir('test-runs'))
     newIter = len(currentDirs)+1
     di = os.path.join('test-runs',str(newIter).zfill(6))
@@ -245,7 +246,7 @@ def model(x,params,templateNames_):
     
     gsm = processGSM_V2()
 
-    gsm.getFiles(di,filterChars_=['output.dat'])
+    gsm.getFiles(di,filterChars_=['output'])
     gsm.getStateInfo()
     eneg, gamma = toEandGamma(gsm.dataInfo['E(3/2-) MeV'])
     modelOut[0,0] = eneg
@@ -273,7 +274,11 @@ gsmCPUs = 3
 
 originalDir = os.getcwd()
 
-data = model([],paramMeans)
+templates = ['template_5He_Mao2020.temp']
+
+data = model([],paramMeans,templates)
+
+print(data)
 
 end = time.time()
 print("Total runtime = ",end - start)

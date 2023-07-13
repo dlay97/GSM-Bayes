@@ -287,7 +287,7 @@ def model(myItems): # For multiprocessing
     """
     index, x, params, runFolder = myItems
     # modelOut = np.zeros((params.shape[0],6))
-
+    print('Working on dataset {}'.format(index))
     # Index of the folder the current process will run in
     newIter = index
     di = os.path.join(runFolder,str(newIter).zfill(6))
@@ -380,14 +380,15 @@ yStd = np.array([20,20,50,50,         # 5He, 5Li
 
 # GSM code emulation information
 # For parallelization
-gsmNodes = 3
-gsmCPUs = 10
+gsmNodes = 2
+gsmCPUs = 14
+totalResourcesGSM = gsmNodes * gsmCPUs
 totalCPUs = mp.cpu_count() # get available number of CPUs
 
 nSamples = 10 # Total number of emulation dataset samples
 
 # For parallelizing emulation process, we divide up remaining nodes from that requested
-emuCPUs = int(totalCPUs / gsmCPUs)
+emuCPUs = int(totalCPUs / totalResourcesGSM)
 
 emuFolder = 'emulator-runs' # Folder to save the emulation data
 
