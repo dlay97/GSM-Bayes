@@ -278,8 +278,6 @@ templates = ['template_5He_Mao2020.temp']
 
 data = model([],paramMeans,templates)
 
-print(data)
-
 end = time.time()
 print("Total runtime = ",end - start)
 

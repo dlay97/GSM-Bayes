@@ -42,7 +42,6 @@ class Prior:
         for i in range(len(paramMeans)):
             toAdd = sps.norm.logpdf(theta[:,i],paramMeans[i],paramStds[i])
             ret += toAdd
-            
         return ret.reshape((-1,1))
     
     def rnd(n):
@@ -64,21 +63,23 @@ paramStds = np.array([0.02,0.04,0.2,0.2,
                       0.02,0.04,0.4,0.5,
                       0.07,0.09,1.130,0.970])
 
-# Names of all template files you wish to use 
-# These specify the nuclei of interest and their states
-templateNames = ['template_5He_Mao2020.temp','template_5Li_Mao2020.temp',
-                  'template_6Be_Mao2020.temp','template_6He_Mao2020.temp',
-                  'template_6Li_Mao2020.temp']
+# These specify the order of the nuclei of interest and their states
+stateOrder = ['5He(3/2-_0)','5Li(3/2-_0)',
+              '6Be(0+_0)','6Be(2+_0)',
+              '6He(0+_0)','6He(2+_0)',
+              '6Li(1+_0)','6Li(3+_0)',
+              '6Li(0+_0)','6Li(2+_0)',
+              '6Li(2+_1)','6Li(1+_1)']
 
 # Experimental data from NNDC (it's S_n and NNDC Gamma error)
-# The ordering is [E_0,Gamma_0,E_1,Gamma_1,...,E_n,Gamma_n] 
+# The ordering is [E_0,Gamma_0,E_1,Gamma_1,...,E_n,Gamma_n]
+minStdVal = 1E-6 # Since surmise can't handle anything less than this value, we pass it in as a minimum instead of 0
 yMean = np.array([735.,600,1970.,1230,            # 5He, 5Li
                   1372.,92,3042.,1160,            # 6Be (0+, 2+)
-                  -975.,0,822.,113,               # 6He (0+, 2+)
-                  -3698.,0,-1512.,24,             # 6Li (1+_0 3+_0)
+                  -975.,minStdVal,822.,113,               # 6He (0+, 2+)
+                  -3698.,minStdVal,-1512.,24,             # 6Li (1+_0 3+_0)
                   -135.1,8.2*10**-3,614,1.3*10**3, # 6Li (0+_0 2+_0)
                   1677.,541,1952,1.3*10**3])      # 6Li (2+_1 1+_1)
-minStdVal = 1E-6 # Since surmise can't handle anything less than this value, we pass it in as a minimum instead of 0
 yStd = np.array([20,20,50,50,         # 5He, 5Li
                  9,6,50,60,           # 6Be (0+, 2+)
                  9,minStdVal,5,20,            # 6He (0+, 2+)
@@ -96,16 +97,34 @@ emulatorDir = os.path.join(originalDir,emuFolder) # Identify emulation folder pa
 
 print('Building emulator...')
 # Load high-fidelity model values and the corresponding theta values
-modelVals = pd.read_csv(os.path.join(emulatorDir,"summary_model_vals.csv")).dropna(axis=1).to_numpy()
+modelVals = pd.read_csv(os.path.join(emulatorDir,"summary_model_vals.csv")).dropna(axis=1)
 thetaData = pd.read_csv(os.path.join(emulatorDir,"summary_model_thetas.csv")).drop(['$GSM_NODES','$GSM_CPUS'],axis=1)
+
+# We will want to make sure our GSM data is in the same format as our 
+# experimental arrays to avoid errors, so we'll construct a new set of columns
+newCols = []
+for so in stateOrder:
+    newCols.append('E'+so)
+    newCols.append('G'+so)
+
+# modelVals = modelVals.reindex(columns=newCols)
+modelVals = modelVals[newCols]
+
+print(modelVals)
+
+# We need to convert everything to a numpy array
 thetaTest = thetaData.to_numpy()
-# xTest = np.asarray([1,2,3,4,5,6])
-xTest = np.arange(thetaTest.shape[1]) #I don't really know what this does
-print('x shape = ',xTest.shape,' theta shape = ',thetaTest.shape,' f shape = ',modelVals.shape)
-# xTest = np.arange((len(modelVals),len(modelVals)))
-# xTest = np.arange(nSamples) #I don't really know what this does. ME TOO! - Josh
-emu = emulator(x=xTest,theta=thetaTest,f=modelVals,method='PCGP')
+modelTest = modelVals.to_numpy()
+
+xTest = np.arange(modelTest.shape[1]) #I don't really know what this does
+print('x shape = ',xTest.shape,'yMean shape = ',yMean.shape,' theta shape = ',thetaTest.shape,' f shape = ',modelTest.shape)
+emu = emulator(x=xTest,theta=thetaTest,f=modelTest,method='PCGP')
 print('Done')
+
+#%%
+
+print(xTest.shape, thetaTest.shape)
+emu.predict(xTest,thetaTest)
 
 #%% Bayesian Calibration
 print('Performing Bayesian Calibration...')
