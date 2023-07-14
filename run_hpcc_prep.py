@@ -135,7 +135,7 @@ yStd = np.array([20,20,50,50,         # 5He, 5Li
 mpiProcesses = 4
 openMPthreads = 8
 
-nSamples = 10 # Total number of emulation dataset samples
+nSamples = 200 # Total number of emulation dataset samples
 
 
 emuFolder = 'emulator-runs' # Folder to save the emulation data

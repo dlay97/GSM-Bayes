@@ -3,7 +3,7 @@
 #SBATCH --ntasks=4
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=50G 
-#SBATCH --array=0-9
+#SBATCH --array=0-199
 #SBATCH -A frib-nodes
 #SBATCH --output=slurm_summary_%A.out
 #SBATCH --error=slurm_summary_%A.error
@@ -19,7 +19,7 @@ NODES=4
 
 # Get array job number and make corresponding directory to run inputs
 directory=$(printf "%06d" $SLURM_ARRAY_TASK_ID)
-echo "Running theta_$SLURM_ARRAY_TASK_ID ..."
+echo "Running theta_$SLURM_ARRAY_TASK_ID in directory $directory ..."
 
 # Provide input paths
 INPath="$(pwd)/emulator-runs/$directory"
@@ -58,7 +58,7 @@ mpirun -np $NODES -map-by node -bind-to none ./GSM_exe <"input_6Li_Mao2020.dat">
 ##################################################
 # To avoid file overflow, remove workspace once completed!
 rm -r "workspace"
-rm "GSM_two_exe"
+rm "GSM_exe"
 
 # Uncomment if you'd like each job ID to be printed onto the slurm summary
 # scontrol show job $SLURM_JOB_ID

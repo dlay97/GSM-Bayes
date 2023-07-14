@@ -1,0 +1,1901 @@
+4 MPI.processes
+8 OpenMP.threads
+STORAGE_DIR: workspace/
+
+print.detailed.information(no)
+dimensions.only(no)
+non.zero.NBMEs.proportion.only(no)
+interaction : FHT-COSM
+coupled.OBMEs.TBMEs.copied(no)
+pivot.from.file(no)
+full.common.vectors.used.in.file(no)
+basis potential(Berggren basis): WS-analytic
+
+OBMEs.interaction.read(no)
+no.TBMEs.read
+
+4 amu(frozen.core.mass)
+4 (A.core)
+2 (Z.core)
+
+pn (basis.space)
+pn (space)
+1 proton(s)[basis]
+1 neutron(s)[basis]
+1 proton(s)
+1 neutron(s)
+Coulomb.Hamiltonian(yes)
+1.00783 amu(proton.mass)
+h^2/2m[p]:20.7384250611379 MeV fm^2
+1.00866 amu(neutron.mass)
+h^2/2m[n]:20.7213599521807 MeV fm^2
+
+neutron.basis.potential(no)
+
+20 fm(rotation-point)
+100 fm(real.maximal.radius)
+80 points.before.R(Gauss.Legendre)
+80 points.after.R(Gauss.Legendre)
+600 points.before.R(uniform)
+600 points.after.R(uniform)
+1.681 fm(charge.radius)
+7.5 fm(cut.function.radius)
+1 fm(cut.function.diffuseness)
+
+5 fm^(-1)(k.max.momentum.space)
+15 fm(R.Fermi.function.momentum.space)
+80 points.before.k.max.momentum.space(Gauss.Legendre)
+600 points.before.k.max.momentum.space(uniform)
+
+3 proton.pole.state(s)
+0s1/2 HO.state(core.frozen) 
+0p3/2 S.matrix.pole  1 hw(truncation.energy) 
+0p1/2 S.matrix.pole  1 hw(truncation.energy) 
+
+0 proton.scattering.like.partial.wave(s)
+2 proton.contour(s)
+partial.wave   k.peak(fm^(-1)) k.middle(fm^(-1)) k.max(fm^(-1))   N.k.peak N.k.middle N.k.max   hw(truncation.energy)
+p3/2    (0.3,-0.3) (0.9,0) (4,0)   15 15 15   1
+p1/2    (0.3,-0.3) (0.9,0) (4,0)   15 15 15   1
+
+
+3 neutron.pole.state(s)
+0s1/2 HO.state(core.frozen) 
+0p3/2 S.matrix.pole  1 hw(truncation.energy) 
+0p1/2 S.matrix.pole  1 hw(truncation.energy) 
+
+0 neutron.scattering.like.partial.wave(s)
+2 neutron.contour(s)
+partial.wave   k.peak(fm^(-1)) k.middle(fm^(-1)) k.max(fm^(-1))   N.k.peak N.k.middle N.k.max   hw(truncation.energy)
+p3/2    (0.3,-0.3) (0.9,0) (4,0)   15 15 15   1
+p1/2    (0.3,-0.3) (0.9,0) (4,0)   15 15 15   1
+
+
+Hamiltonian potential for core: WS-analytic
+
+proton
+
+l   d(fm)   R0(fm)   Vo(MeV)   Vso(MeV)
+0   0.64   2.06   42.1   0
+1   0.658344993479646   2.07665053470996   42.3767139704823   10.2292132499145
+
+neutron
+
+l   d(fm)   R0(fm)   Vo(MeV)   Vso(MeV)
+0   0.63   2.15   39.5   0
+1   0.640789781071468   2.17982668533945   39.3129806093106   10.7904155156332
+
+
+
+Basis potential: WS-analytic
+
+proton
+
+l   d(fm)   R0(fm)   Vo(MeV)   Vso(MeV)
+0   0.65   2.45   58.4   0
+1   0.65   2.45   58.4   12
+
+neutron
+
+l   d(fm)   R0(fm)   Vo(MeV)   Vso(MeV)
+0   0.65   2.45   58.4   0
+1   0.65   2.45   58.4   12
+
+
+
+truncation.hw(no)
+truncation.particle.hole(no)
+
+on.the.fly (Hamiltonian)
+on.the.fly (uncoupled.TBMEs)
+on.the.fly (one.jumps.proton.neutron)
+Davidson
+1 Lanczos/Davidson.restarts
+configuration.probabilities.printed(no)
+vectors.stored.on.disk(no)
+300 vectors
+1e-10 (eigenvector.precision)
+Lowdin.J.projection
+T2.CM.operators.calculated(yes)
+M=J.imposed.in.GSM.vectors(no)
+eigenvectors.all.M.projections.disk.storage(yes)
+
+4 eigenset(s)
+eigenset   eigenvectors.number   eigenvectors.indices
+1+   2   0 1   
+3+   1   0   
+0+   1   0   
+2+   2   0 1   
+
+A.dependence(yes)
+0 (A.dependence.alpha.core.potential)
+0.333333333333333 (A.dependence.exponent)
+
+1 (lmax.for.interaction)
+
+0 (V0.central.odd.triplet(S=1,T=1))
+-8.46548805456092 (V0.central.even.triplet(S=1,T=0))
+-8.96280710572358 (V0.central.odd.singlet(S=0,T=0))
+-10.0279412648964 (V0.central.even.singlet(S=0,T=1))
+-0 (V0.spin.orbit.odd.triplet(S=1,T=1))
+0 (V0.spin.orbit.even.triplet(S=1,T=0))
+-0 (V0.tensor.odd.triplet(S=1,T=1))
+-23.6833447051844 (V0.tensor.even.triplet(S=1,T=0))
+
+1.51 fm(b.HO)
+l   n.max.HO
+0   10
+1   10
+
+5 (J.relative.max.nuclear.interaction)
+
+
+3 proton.partial.wave.b.HO(s)
+partial.wave   b.HO(fm)
+s1/2   1.51
+p3/2   1.51
+p1/2   1.51
+
+3 neutron.partial.wave.b.HO(s)
+partial.wave   b.HO(fm)
+s1/2   1.51
+p3/2   1.51
+p1/2   1.51
+
+
+are.there.new.proton.natural.orbitals(no)
+are.there.new.neutron.natural.orbitals(no)
+
+GSM.multipoles(no)
+EM.transitions(no)
+EM.transitions.strength(no)
+beta.transitions(no)
+beta.transitions.strength(no)
+density(no)
+transition.density(no)
+correlation.density(no)
+pair.density(no)
+spectroscopic.factor(no)
+overlap.function(no)
+rms.radius(no)
+rms.radius.one.body.strength(no)
+Hamiltonian.parts(no)
+dagger.tilde.operators(no)
+
+unsigned int constants transferred
+int constants transferred
+bool constants transferred
+double constants transferred
+unsigned int tables transferred
+int tables transferred
+bool tables transferred
+double tables transferred
+complex tables transferred
+shells/PSI quantum numbers tables transferred
+
+Common input_data transfer done
+
+
+(neutrons) hw:18.1758343512835 MeV. 3/4 hw:13.6318757634626 MeV
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Input file data read and transfered
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Present  number of active processes for 2D partitioning : 3
+Previous number of active processes for 2D partitioning : 1
+Next     number of active processes for 2D partitioning : 6
+
+
+Basis interaction
+-----------------
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Basis interaction calculated. time:1.31200067698956e-06 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Berggren basis proton space
+----------------------------
+
+proton 0p3/2   k : (0,0.542522401123798) fm^(-1)   E : -7.64188870266088 MeV   G : -0 keV   |Jost(k)|oo : 1.12132525487141e-14
+
+0p3/2 norm from complex scaling : (2.88004580814491,0)
+
+proton 0p1/2   k : (0,0.0617577233467353) fm^(-1)   E : -0.0990256982113351 MeV   G : -0 keV   |Jost(k)|oo : 1.07369668711499e-12
+
+0p1/2 norm from complex scaling : (4.17364672860383,0)
+
+1p3/2 k:(0.0195942964949788,-0.00180112229692719) fm^(-1) E:0.00988415574994013 MeV G:3.66520463550259 keV
+2p3/2 k:(0.0267482128058587,-0.0094089911398941) fm^(-1) E:0.0162775783878288 MeV G:26.1374478015555 keV
+3p3/2 k:(0.0393110574883602,-0.0227690124884359) fm^(-1) E:0.0266628613053568 MeV G:92.9574648843232 keV
+4p3/2 k:(0.0567714351460158,-0.0413373402959745) fm^(-1) E:0.0393146467485396 MeV G:243.723694233209 keV
+5p3/2 k:(0.0784148817191023,-0.0643541741087192) fm^(-1) E:0.0521202658853096 MeV G:524.083590811607 keV
+6p3/2 k:(0.10335540213249,-0.0908772979383655) fm^(-1) E:0.0629268964686748 MeV G:975.470041405652 keV
+7p3/2 k:(0.13057196044741,-0.119820885900385) fm^(-1) E:0.0698938796986205 MeV G:1624.82951801153 keV
+8p3/2 k:(0.158950322517194,-0.15) fm^(-1) E:0.071794751362752 MeV G:2476.15611152377 keV
+9p3/2 k:(0.187328684586977,-0.180179114099615) fm^(-1) E:0.0682200242620004 MeV G:3505.37173106812 keV
+10p3/2 k:(0.214545242901898,-0.209122702061634) fm^(-1) E:0.059647712860207 MeV G:4659.56549264652 keV
+11p3/2 k:(0.239485763315285,-0.235645825891281) fm^(-1) E:0.0473700028120221 MeV G:5860.9066144769 keV
+12p3/2 k:(0.261129209888372,-0.258662659704026) fm^(-1) E:0.0332877772021768 MeV G:7014.78787729445 keV
+13p3/2 k:(0.278589587546028,-0.277230987511564) fm^(-1) E:0.0196061173780895 MeV G:8021.06436804297 keV
+14p3/2 k:(0.291152432228529,-0.290591008860106) fm^(-1) E:0.00847983377068629 MeV G:8786.7434107517 keV
+15p3/2 k:(0.298306348539409,-0.298198877703073) fm^(-1) E:0.00166444803004236 MeV G:9238.33804918373 keV
+16p3/2 k:(0.303602244593854,-0.298198877703073) fm^(-1) E:0.0844272820789434 MeV G:9402.34822953644 keV
+17p3/2 k:(0.318817982279788,-0.290591008860106) fm^(-1) E:0.446620372676697 MeV G:9621.66719193763 keV
+18p3/2 k:(0.345538024976872,-0.277230987511564) fm^(-1) E:1.10447986472851 MeV G:9948.62286261154 keV
+19p3/2 k:(0.382674680591949,-0.258662659704026) fm^(-1) E:2.06497914080307 MeV G:10279.8982599896 keV
+20p3/2 k:(0.428708348217438,-0.235645825891281) fm^(-1) E:3.33014391054765 MeV G:10491.7284391606 keV
+21p3/2 k:(0.481754595876731,-0.209122702061634) fm^(-1) E:4.89038375731629 MeV G:10462.9077788386 keV
+22p3/2 k:(0.53964177180077,-0.180179114099615) fm^(-1) E:6.7180554256319 MeV G:10097.999758791 keV
+23p3/2 k:(0.6,-0.15) fm^(-1) E:8.76272404279934 MeV G:9346.90564565263 keV
+24p3/2 k:(0.66035822819923,-0.119820885900385) fm^(-1) E:10.9492754050092 MeV G:8217.45754573441 keV
+25p3/2 k:(0.718245404123269,-0.0908772979383655) fm^(-1) E:13.1795985226082 MeV G:6778.81232759774 keV
+26p3/2 k:(0.771291651782562,-0.0643541741087192) fm^(-1) E:15.3379957137946 MeV G:5154.90541549525 keV
+27p3/2 k:(0.817325319408051,-0.0413373402959745) fm^(-1) E:17.2998735526909 MeV G:3508.83407692834 keV
+28p3/2 k:(0.854461975023128,-0.0227690124884359) fm^(-1) E:18.9427203968355 MeV G:2020.51595945289 keV
+29p3/2 k:(0.881182017720212,-0.0094089911398941) fm^(-1) E:20.1579837893145 MeV G:861.061228987483 keV
+30p3/2 k:(0.896397755406146,-0.00180112229692719) fm^(-1) E:20.8624411823125 MeV G:167.67538498821 keV
+31p3/2 k:(0.918611597068248,0) fm^(-1) E:21.9093354920875 MeV G:-0 keV
+32p3/2 k:(0.997226241778906,0) fm^(-1) E:25.8197929041994 MeV G:-0 keV
+33p3/2 k:(1.13527979571384,0) fm^(-1) E:33.4634855996973 MeV G:-0 keV
+34p3/2 k:(1.32715251639174,0) fm^(-1) E:45.7306134877648 MeV G:-0 keV
+35p3/2 k:(1.56499313245676,0) fm^(-1) E:63.5902057356729 MeV G:-0 keV
+36p3/2 k:(1.83906541202978,0) fm^(-1) E:87.8131812708419 MeV G:-0 keV
+37p3/2 k:(2.13814915430398,0) fm^(-1) E:118.697440230844 MeV G:-0 keV
+38p3/2 k:(2.45,0) fm^(-1) E:155.846669827861 MeV G:-0 keV
+39p3/2 k:(2.76185084569602,0) fm^(-1) E:198.045874165092 MeV G:-0 keV
+40p3/2 k:(3.06093458797022,0) fm^(-1) E:243.261542116255 MeV G:-0 keV
+41p3/2 k:(3.33500686754324,0) fm^(-1) E:288.77448831755 MeV G:-0 keV
+42p3/2 k:(3.57284748360826,0) fm^(-1) E:331.43190498971 MeV G:-0 keV
+43p3/2 k:(3.76472020428616,0) fm^(-1) E:367.985551874641 MeV G:-0 keV
+44p3/2 k:(3.90277375822109,0) fm^(-1) E:395.468694507568 MeV G:-0 keV
+45p3/2 k:(3.98138840293175,0) fm^(-1) E:411.561225793998 MeV G:-0 keV
+
+1p1/2 k:(0.0195942964949788,-0.00180112229692719) fm^(-1) E:0.00988415574994013 MeV G:3.66520463550259 keV
+2p1/2 k:(0.0267482128058587,-0.0094089911398941) fm^(-1) E:0.0162775783878288 MeV G:26.1374478015555 keV
+3p1/2 k:(0.0393110574883602,-0.0227690124884359) fm^(-1) E:0.0266628613053568 MeV G:92.9574648843232 keV
+4p1/2 k:(0.0567714351460158,-0.0413373402959745) fm^(-1) E:0.0393146467485396 MeV G:243.723694233209 keV
+5p1/2 k:(0.0784148817191023,-0.0643541741087192) fm^(-1) E:0.0521202658853096 MeV G:524.083590811607 keV
+6p1/2 k:(0.10335540213249,-0.0908772979383655) fm^(-1) E:0.0629268964686748 MeV G:975.470041405652 keV
+7p1/2 k:(0.13057196044741,-0.119820885900385) fm^(-1) E:0.0698938796986205 MeV G:1624.82951801153 keV
+8p1/2 k:(0.158950322517194,-0.15) fm^(-1) E:0.071794751362752 MeV G:2476.15611152377 keV
+9p1/2 k:(0.187328684586977,-0.180179114099615) fm^(-1) E:0.0682200242620004 MeV G:3505.37173106812 keV
+10p1/2 k:(0.214545242901898,-0.209122702061634) fm^(-1) E:0.059647712860207 MeV G:4659.56549264652 keV
+11p1/2 k:(0.239485763315285,-0.235645825891281) fm^(-1) E:0.0473700028120221 MeV G:5860.9066144769 keV
+12p1/2 k:(0.261129209888372,-0.258662659704026) fm^(-1) E:0.0332877772021768 MeV G:7014.78787729445 keV
+13p1/2 k:(0.278589587546028,-0.277230987511564) fm^(-1) E:0.0196061173780895 MeV G:8021.06436804297 keV
+14p1/2 k:(0.291152432228529,-0.290591008860106) fm^(-1) E:0.00847983377068629 MeV G:8786.7434107517 keV
+15p1/2 k:(0.298306348539409,-0.298198877703073) fm^(-1) E:0.00166444803004236 MeV G:9238.33804918373 keV
+16p1/2 k:(0.303602244593854,-0.298198877703073) fm^(-1) E:0.0844272820789434 MeV G:9402.34822953644 keV
+17p1/2 k:(0.318817982279788,-0.290591008860106) fm^(-1) E:0.446620372676697 MeV G:9621.66719193763 keV
+18p1/2 k:(0.345538024976872,-0.277230987511564) fm^(-1) E:1.10447986472851 MeV G:9948.62286261154 keV
+19p1/2 k:(0.382674680591949,-0.258662659704026) fm^(-1) E:2.06497914080307 MeV G:10279.8982599896 keV
+20p1/2 k:(0.428708348217438,-0.235645825891281) fm^(-1) E:3.33014391054765 MeV G:10491.7284391606 keV
+21p1/2 k:(0.481754595876731,-0.209122702061634) fm^(-1) E:4.89038375731629 MeV G:10462.9077788386 keV
+22p1/2 k:(0.53964177180077,-0.180179114099615) fm^(-1) E:6.7180554256319 MeV G:10097.999758791 keV
+23p1/2 k:(0.6,-0.15) fm^(-1) E:8.76272404279934 MeV G:9346.90564565263 keV
+24p1/2 k:(0.66035822819923,-0.119820885900385) fm^(-1) E:10.9492754050092 MeV G:8217.45754573441 keV
+25p1/2 k:(0.718245404123269,-0.0908772979383655) fm^(-1) E:13.1795985226082 MeV G:6778.81232759774 keV
+26p1/2 k:(0.771291651782562,-0.0643541741087192) fm^(-1) E:15.3379957137946 MeV G:5154.90541549525 keV
+27p1/2 k:(0.817325319408051,-0.0413373402959745) fm^(-1) E:17.2998735526909 MeV G:3508.83407692834 keV
+28p1/2 k:(0.854461975023128,-0.0227690124884359) fm^(-1) E:18.9427203968355 MeV G:2020.51595945289 keV
+29p1/2 k:(0.881182017720212,-0.0094089911398941) fm^(-1) E:20.1579837893145 MeV G:861.061228987483 keV
+30p1/2 k:(0.896397755406146,-0.00180112229692719) fm^(-1) E:20.8624411823125 MeV G:167.67538498821 keV
+31p1/2 k:(0.918611597068248,0) fm^(-1) E:21.9093354920875 MeV G:-0 keV
+32p1/2 k:(0.997226241778906,0) fm^(-1) E:25.8197929041994 MeV G:-0 keV
+33p1/2 k:(1.13527979571384,0) fm^(-1) E:33.4634855996973 MeV G:-0 keV
+34p1/2 k:(1.32715251639174,0) fm^(-1) E:45.7306134877648 MeV G:-0 keV
+35p1/2 k:(1.56499313245676,0) fm^(-1) E:63.5902057356729 MeV G:-0 keV
+36p1/2 k:(1.83906541202978,0) fm^(-1) E:87.8131812708419 MeV G:-0 keV
+37p1/2 k:(2.13814915430398,0) fm^(-1) E:118.697440230844 MeV G:-0 keV
+38p1/2 k:(2.45,0) fm^(-1) E:155.846669827861 MeV G:-0 keV
+39p1/2 k:(2.76185084569602,0) fm^(-1) E:198.045874165092 MeV G:-0 keV
+40p1/2 k:(3.06093458797022,0) fm^(-1) E:243.261542116255 MeV G:-0 keV
+41p1/2 k:(3.33500686754324,0) fm^(-1) E:288.77448831755 MeV G:-0 keV
+42p1/2 k:(3.57284748360826,0) fm^(-1) E:331.43190498971 MeV G:-0 keV
+43p1/2 k:(3.76472020428616,0) fm^(-1) E:367.985551874641 MeV G:-0 keV
+44p1/2 k:(3.90277375822109,0) fm^(-1) E:395.468694507568 MeV G:-0 keV
+45p1/2 k:(3.98138840293175,0) fm^(-1) E:411.561225793998 MeV G:-0 keV
+
+
+Maximal       |overlap|oo:1.50497911022285e-07
+Average       |overlap|oo:6.60452633097604e-10
+Dispersion of |overlap|oo:5.64622065196132e-09
+
+Maximal       |overlap(wf , wf')|oo:1.4897949540682e-07
+Average       |overlap(wf , wf')|oo:4.27006200389946e-10
+Dispersion of |overlap(wf , wf')|oo:5.17895264224227e-09
+
+proton space basis states read/calculated. time:2.86299641791265 s
+
+
+Berggren basis neutron space
+----------------------------
+
+neutron 0p3/2   k : (0,0.583840272299492) fm^(-1)   E : -8.84439056259703 MeV   G : -0 keV   |Jost(k)|oo : 3.76170899984984e-11
+
+0p3/2 norm from complex scaling : (2.80059393360094,0)
+
+neutron 0p1/2   k : (0,0.200552381554823) fm^(-1)   E : -1.04360334516969 MeV   G : -0 keV   |Jost(k)|oo : 2.0573959202963e-12
+
+0p1/2 norm from complex scaling : (3.78942530262241,0)
+
+1p3/2 k:(0.00180112229692719,-0.00180112229692719) fm^(-1) E:0 MeV G:0.336686894504294 keV
+2p3/2 k:(0.0094089911398941,-0.0094089911398941) fm^(-1) E:0 MeV G:9.18810449719359 keV
+3p3/2 k:(0.0227690124884359,-0.0227690124884359) fm^(-1) E:0 MeV G:53.8056890276106 keV
+4p3/2 k:(0.0413373402959745,-0.0413373402959745) fm^(-1) E:0 MeV G:177.347416705165 keV
+5p3/2 k:(0.0643541741087192,-0.0643541741087192) fm^(-1) E:0 MeV G:429.826560897059 keV
+6p3/2 k:(0.0908772979383655,-0.0908772979383655) fm^(-1) E:0 MeV G:857.137740689848 keV
+7p3/2 k:(0.119820885900385,-0.119820885900385) fm^(-1) E:0 MeV G:1490.06378345153 keV
+8p3/2 k:(0.15,-0.15) fm^(-1) E:0 MeV G:2335.19055160701 keV
+9p3/2 k:(0.180179114099615,-0.180179114099615) fm^(-1) E:0 MeV G:3369.3699728193 keV
+10p3/2 k:(0.209122702061634,-0.209122702061634) fm^(-1) E:0 MeV G:4538.81174708465 keV
+11p3/2 k:(0.235645825891281,-0.235645825891281) fm^(-1) E:0 MeV G:5763.14185172101 keV
+12p3/2 k:(0.258662659704026,-0.258662659704026) fm^(-1) E:0 MeV G:6943.96118346058 keV
+13p3/2 k:(0.277230987511564,-0.277230987511564) fm^(-1) E:0 MeV G:7976.70168659118 keV
+14p3/2 k:(0.290591008860106,-0.290591008860106) fm^(-1) E:0 MeV G:8764.03598532431 keV
+15p3/2 k:(0.298198877703073,-0.298198877703073) fm^(-1) E:0 MeV G:9228.93985945393 keV
+16p3/2 k:(0.303602244593854,-0.298198877703073) fm^(-1) E:0.0843717905723409 MeV G:9396.16834957334 keV
+17p3/2 k:(0.318817982279788,-0.290591008860106) fm^(-1) E:0.446326822573591 MeV G:9615.34316023412 keV
+18p3/2 k:(0.345538024976872,-0.277230987511564) fm^(-1) E:1.10375392341906 MeV G:9942.08393280506 keV
+19p3/2 k:(0.382674680591949,-0.258662659704026) fm^(-1) E:2.06362189228334 MeV G:10273.141592854 keV
+20p3/2 k:(0.428708348217438,-0.235645825891281) fm^(-1) E:3.32795510737587 MeV G:10484.832542436 keV
+21p3/2 k:(0.481754595876731,-0.209122702061634) fm^(-1) E:4.88716945554232 MeV G:10456.030825065 keV
+22p3/2 k:(0.53964177180077,-0.180179114099615) fm^(-1) E:6.71363985038386 MeV G:10091.3626480551 keV
+23p3/2 k:(0.6,-0.15) fm^(-1) E:8.75696456852629 MeV G:9340.76220642804 keV
+24p3/2 k:(0.66035822819923,-0.119820885900385) fm^(-1) E:10.9420787764613 MeV G:8212.05645868735 keV
+25p3/2 k:(0.718245404123269,-0.0908772979383655) fm^(-1) E:13.1709359699306 MeV G:6774.35681867016 keV
+26p3/2 k:(0.771291651782562,-0.0643541741087192) fm^(-1) E:15.3279145117298 MeV G:5151.51725161202 keV
+27p3/2 k:(0.817325319408051,-0.0413373402959745) fm^(-1) E:17.288502867483 MeV G:3506.52782609861 keV
+28p3/2 k:(0.854461975023128,-0.0227690124884359) fm^(-1) E:18.9302699179371 MeV G:2019.18793524148 keV
+29p3/2 k:(0.881182017720212,-0.0094089911398941) fm^(-1) E:20.1447345544346 MeV G:860.495279407004 keV
+30p3/2 k:(0.896397755406146,-0.00180112229692719) fm^(-1) E:20.8487289288311 MeV G:167.565177013915 keV
+31p3/2 k:(0.918611597068248,0) fm^(-1) E:21.8949351465454 MeV G:-0 keV
+32p3/2 k:(0.997226241778906,0) fm^(-1) E:25.8028223329204 MeV G:-0 keV
+33p3/2 k:(1.13527979571384,0) fm^(-1) E:33.4414910597054 MeV G:-0 keV
+34p3/2 k:(1.32715251639174,0) fm^(-1) E:45.7005561345277 MeV G:-0 keV
+35p3/2 k:(1.56499313245676,0) fm^(-1) E:63.548409811008 MeV G:-0 keV
+36p3/2 k:(1.83906541202978,0) fm^(-1) E:87.7554643148025 MeV G:-0 keV
+37p3/2 k:(2.13814915430398,0) fm^(-1) E:118.619423982706 MeV G:-0 keV
+38p3/2 k:(2.45,0) fm^(-1) E:155.744236511345 MeV G:-0 keV
+39p3/2 k:(2.76185084569602,0) fm^(-1) E:197.915704584085 MeV G:-0 keV
+40p3/2 k:(3.06093458797022,0) fm^(-1) E:243.101653640183 MeV G:-0 keV
+41p3/2 k:(3.33500686754324,0) fm^(-1) E:288.584685554385 MeV G:-0 keV
+42p3/2 k:(3.57284748360826,0) fm^(-1) E:331.214064792902 MeV G:-0 keV
+43p3/2 k:(3.76472020428616,0) fm^(-1) E:367.743686068013 MeV G:-0 keV
+44p3/2 k:(3.90277375822109,0) fm^(-1) E:395.208764860042 MeV G:-0 keV
+45p3/2 k:(3.98138840293175,0) fm^(-1) E:411.290719010928 MeV G:-0 keV
+
+1p1/2 k:(0.00180112229692719,-0.00180112229692719) fm^(-1) E:0 MeV G:0.336686894504294 keV
+2p1/2 k:(0.0094089911398941,-0.0094089911398941) fm^(-1) E:0 MeV G:9.18810449719359 keV
+3p1/2 k:(0.0227690124884359,-0.0227690124884359) fm^(-1) E:0 MeV G:53.8056890276106 keV
+4p1/2 k:(0.0413373402959745,-0.0413373402959745) fm^(-1) E:0 MeV G:177.347416705165 keV
+5p1/2 k:(0.0643541741087192,-0.0643541741087192) fm^(-1) E:0 MeV G:429.826560897059 keV
+6p1/2 k:(0.0908772979383655,-0.0908772979383655) fm^(-1) E:0 MeV G:857.137740689848 keV
+7p1/2 k:(0.119820885900385,-0.119820885900385) fm^(-1) E:0 MeV G:1490.06378345153 keV
+8p1/2 k:(0.15,-0.15) fm^(-1) E:0 MeV G:2335.19055160701 keV
+9p1/2 k:(0.180179114099615,-0.180179114099615) fm^(-1) E:0 MeV G:3369.3699728193 keV
+10p1/2 k:(0.209122702061634,-0.209122702061634) fm^(-1) E:0 MeV G:4538.81174708465 keV
+11p1/2 k:(0.235645825891281,-0.235645825891281) fm^(-1) E:0 MeV G:5763.14185172101 keV
+12p1/2 k:(0.258662659704026,-0.258662659704026) fm^(-1) E:0 MeV G:6943.96118346058 keV
+13p1/2 k:(0.277230987511564,-0.277230987511564) fm^(-1) E:0 MeV G:7976.70168659118 keV
+14p1/2 k:(0.290591008860106,-0.290591008860106) fm^(-1) E:0 MeV G:8764.03598532431 keV
+15p1/2 k:(0.298198877703073,-0.298198877703073) fm^(-1) E:0 MeV G:9228.93985945393 keV
+16p1/2 k:(0.303602244593854,-0.298198877703073) fm^(-1) E:0.0843717905723409 MeV G:9396.16834957334 keV
+17p1/2 k:(0.318817982279788,-0.290591008860106) fm^(-1) E:0.446326822573591 MeV G:9615.34316023412 keV
+18p1/2 k:(0.345538024976872,-0.277230987511564) fm^(-1) E:1.10375392341906 MeV G:9942.08393280506 keV
+19p1/2 k:(0.382674680591949,-0.258662659704026) fm^(-1) E:2.06362189228334 MeV G:10273.141592854 keV
+20p1/2 k:(0.428708348217438,-0.235645825891281) fm^(-1) E:3.32795510737587 MeV G:10484.832542436 keV
+21p1/2 k:(0.481754595876731,-0.209122702061634) fm^(-1) E:4.88716945554232 MeV G:10456.030825065 keV
+22p1/2 k:(0.53964177180077,-0.180179114099615) fm^(-1) E:6.71363985038386 MeV G:10091.3626480551 keV
+23p1/2 k:(0.6,-0.15) fm^(-1) E:8.75696456852629 MeV G:9340.76220642804 keV
+24p1/2 k:(0.66035822819923,-0.119820885900385) fm^(-1) E:10.9420787764613 MeV G:8212.05645868735 keV
+25p1/2 k:(0.718245404123269,-0.0908772979383655) fm^(-1) E:13.1709359699306 MeV G:6774.35681867016 keV
+26p1/2 k:(0.771291651782562,-0.0643541741087192) fm^(-1) E:15.3279145117298 MeV G:5151.51725161202 keV
+27p1/2 k:(0.817325319408051,-0.0413373402959745) fm^(-1) E:17.288502867483 MeV G:3506.52782609861 keV
+28p1/2 k:(0.854461975023128,-0.0227690124884359) fm^(-1) E:18.9302699179371 MeV G:2019.18793524148 keV
+29p1/2 k:(0.881182017720212,-0.0094089911398941) fm^(-1) E:20.1447345544346 MeV G:860.495279407004 keV
+30p1/2 k:(0.896397755406146,-0.00180112229692719) fm^(-1) E:20.8487289288311 MeV G:167.565177013915 keV
+31p1/2 k:(0.918611597068248,0) fm^(-1) E:21.8949351465454 MeV G:-0 keV
+32p1/2 k:(0.997226241778906,0) fm^(-1) E:25.8028223329204 MeV G:-0 keV
+33p1/2 k:(1.13527979571384,0) fm^(-1) E:33.4414910597054 MeV G:-0 keV
+34p1/2 k:(1.32715251639174,0) fm^(-1) E:45.7005561345277 MeV G:-0 keV
+35p1/2 k:(1.56499313245676,0) fm^(-1) E:63.548409811008 MeV G:-0 keV
+36p1/2 k:(1.83906541202978,0) fm^(-1) E:87.7554643148025 MeV G:-0 keV
+37p1/2 k:(2.13814915430398,0) fm^(-1) E:118.619423982706 MeV G:-0 keV
+38p1/2 k:(2.45,0) fm^(-1) E:155.744236511345 MeV G:-0 keV
+39p1/2 k:(2.76185084569602,0) fm^(-1) E:197.915704584085 MeV G:-0 keV
+40p1/2 k:(3.06093458797022,0) fm^(-1) E:243.101653640183 MeV G:-0 keV
+41p1/2 k:(3.33500686754324,0) fm^(-1) E:288.584685554385 MeV G:-0 keV
+42p1/2 k:(3.57284748360826,0) fm^(-1) E:331.214064792902 MeV G:-0 keV
+43p1/2 k:(3.76472020428616,0) fm^(-1) E:367.743686068013 MeV G:-0 keV
+44p1/2 k:(3.90277375822109,0) fm^(-1) E:395.208764860042 MeV G:-0 keV
+45p1/2 k:(3.98138840293175,0) fm^(-1) E:411.290719010928 MeV G:-0 keV
+
+
+Maximal       |overlap|oo:4.07344202812965e-09
+Average       |overlap|oo:7.40151847077654e-11
+Dispersion of |overlap|oo:2.15378194848929e-10
+
+Maximal       |overlap(wf , wf')|oo:8.2978601767536e-10
+Average       |overlap(wf , wf')|oo:3.50986941964972e-11
+Dispersion of |overlap(wf , wf')|oo:6.48147237620179e-11
+
+neutron space basis states read/calculated. time:0.539084359072149 s
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Berggren basis calculated and built. time:3.40262068109587 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Interaction
+-----------
+
+
+Moshinsky coefficients and recoupling terms calculated (two-nucleon systems). time:0.224914041929878 s
+
+
+Coupled HO TBMEs calculated. time:0.289896297967061 s
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Interaction calculated. time:0.315283186966553 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+OBMEs and TBMEs 
+----------------
+
+
+Basis energies proton space
+----------------------------
+
+HO.shell 0s1/2 proton E:-7.14642217473321 MeV
+
+Berggren 0p3/2 proton E:-7.64188870266088 MeV  Gamma:-0 keV
+
+Berggren 0p1/2 proton E:-0.0990256982113351 MeV  Gamma:-0 keV
+
+Berggren 1p3/2 proton E:0.00988415574994013 MeV  Gamma:3.66520463550259 keV
+Berggren 2p3/2 proton E:0.0162775783878288 MeV  Gamma:26.1374478015555 keV
+Berggren 3p3/2 proton E:0.0266628613053568 MeV  Gamma:92.9574648843232 keV
+Berggren 4p3/2 proton E:0.0393146467485396 MeV  Gamma:243.723694233209 keV
+Berggren 5p3/2 proton E:0.0521202658853096 MeV  Gamma:524.083590811607 keV
+Berggren 6p3/2 proton E:0.0629268964686748 MeV  Gamma:975.470041405652 keV
+Berggren 7p3/2 proton E:0.0698938796986205 MeV  Gamma:1624.82951801153 keV
+Berggren 8p3/2 proton E:0.071794751362752 MeV  Gamma:2476.15611152377 keV
+Berggren 9p3/2 proton E:0.0682200242620004 MeV  Gamma:3505.37173106812 keV
+Berggren 10p3/2 proton E:0.059647712860207 MeV  Gamma:4659.56549264652 keV
+Berggren 11p3/2 proton E:0.0473700028120221 MeV  Gamma:5860.9066144769 keV
+Berggren 12p3/2 proton E:0.0332877772021768 MeV  Gamma:7014.78787729445 keV
+Berggren 13p3/2 proton E:0.0196061173780895 MeV  Gamma:8021.06436804297 keV
+Berggren 14p3/2 proton E:0.00847983377068629 MeV  Gamma:8786.7434107517 keV
+Berggren 15p3/2 proton E:0.00166444803004236 MeV  Gamma:9238.33804918373 keV
+Berggren 16p3/2 proton E:0.0844272820789434 MeV  Gamma:9402.34822953644 keV
+Berggren 17p3/2 proton E:0.446620372676697 MeV  Gamma:9621.66719193763 keV
+Berggren 18p3/2 proton E:1.10447986472851 MeV  Gamma:9948.62286261154 keV
+Berggren 19p3/2 proton E:2.06497914080307 MeV  Gamma:10279.8982599896 keV
+Berggren 20p3/2 proton E:3.33014391054765 MeV  Gamma:10491.7284391606 keV
+Berggren 21p3/2 proton E:4.89038375731629 MeV  Gamma:10462.9077788386 keV
+Berggren 22p3/2 proton E:6.7180554256319 MeV  Gamma:10097.999758791 keV
+Berggren 23p3/2 proton E:8.76272404279934 MeV  Gamma:9346.90564565263 keV
+Berggren 24p3/2 proton E:10.9492754050092 MeV  Gamma:8217.45754573441 keV
+Berggren 25p3/2 proton E:13.1795985226082 MeV  Gamma:6778.81232759774 keV
+Berggren 26p3/2 proton E:15.3379957137946 MeV  Gamma:5154.90541549525 keV
+Berggren 27p3/2 proton E:17.2998735526909 MeV  Gamma:3508.83407692834 keV
+Berggren 28p3/2 proton E:18.9427203968355 MeV  Gamma:2020.51595945289 keV
+Berggren 29p3/2 proton E:20.1579837893145 MeV  Gamma:861.061228987483 keV
+Berggren 30p3/2 proton E:20.8624411823125 MeV  Gamma:167.67538498821 keV
+Berggren 31p3/2 proton E:21.9093354920875 MeV  Gamma:-0 keV
+Berggren 32p3/2 proton E:25.8197929041994 MeV  Gamma:-0 keV
+Berggren 33p3/2 proton E:33.4634855996973 MeV  Gamma:-0 keV
+Berggren 34p3/2 proton E:45.7306134877648 MeV  Gamma:-0 keV
+Berggren 35p3/2 proton E:63.5902057356729 MeV  Gamma:-0 keV
+Berggren 36p3/2 proton E:87.8131812708419 MeV  Gamma:-0 keV
+Berggren 37p3/2 proton E:118.697440230844 MeV  Gamma:-0 keV
+Berggren 38p3/2 proton E:155.846669827861 MeV  Gamma:-0 keV
+Berggren 39p3/2 proton E:198.045874165092 MeV  Gamma:-0 keV
+Berggren 40p3/2 proton E:243.261542116255 MeV  Gamma:-0 keV
+Berggren 41p3/2 proton E:288.77448831755 MeV  Gamma:-0 keV
+Berggren 42p3/2 proton E:331.43190498971 MeV  Gamma:-0 keV
+Berggren 43p3/2 proton E:367.985551874641 MeV  Gamma:-0 keV
+Berggren 44p3/2 proton E:395.468694507568 MeV  Gamma:-0 keV
+Berggren 45p3/2 proton E:411.561225793998 MeV  Gamma:-0 keV
+
+Berggren 1p1/2 proton E:0.00988415574994013 MeV  Gamma:3.66520463550259 keV
+Berggren 2p1/2 proton E:0.0162775783878288 MeV  Gamma:26.1374478015555 keV
+Berggren 3p1/2 proton E:0.0266628613053568 MeV  Gamma:92.9574648843232 keV
+Berggren 4p1/2 proton E:0.0393146467485396 MeV  Gamma:243.723694233209 keV
+Berggren 5p1/2 proton E:0.0521202658853096 MeV  Gamma:524.083590811607 keV
+Berggren 6p1/2 proton E:0.0629268964686748 MeV  Gamma:975.470041405652 keV
+Berggren 7p1/2 proton E:0.0698938796986205 MeV  Gamma:1624.82951801153 keV
+Berggren 8p1/2 proton E:0.071794751362752 MeV  Gamma:2476.15611152377 keV
+Berggren 9p1/2 proton E:0.0682200242620004 MeV  Gamma:3505.37173106812 keV
+Berggren 10p1/2 proton E:0.059647712860207 MeV  Gamma:4659.56549264652 keV
+Berggren 11p1/2 proton E:0.0473700028120221 MeV  Gamma:5860.9066144769 keV
+Berggren 12p1/2 proton E:0.0332877772021768 MeV  Gamma:7014.78787729445 keV
+Berggren 13p1/2 proton E:0.0196061173780895 MeV  Gamma:8021.06436804297 keV
+Berggren 14p1/2 proton E:0.00847983377068629 MeV  Gamma:8786.7434107517 keV
+Berggren 15p1/2 proton E:0.00166444803004236 MeV  Gamma:9238.33804918373 keV
+Berggren 16p1/2 proton E:0.0844272820789434 MeV  Gamma:9402.34822953644 keV
+Berggren 17p1/2 proton E:0.446620372676697 MeV  Gamma:9621.66719193763 keV
+Berggren 18p1/2 proton E:1.10447986472851 MeV  Gamma:9948.62286261154 keV
+Berggren 19p1/2 proton E:2.06497914080307 MeV  Gamma:10279.8982599896 keV
+Berggren 20p1/2 proton E:3.33014391054765 MeV  Gamma:10491.7284391606 keV
+Berggren 21p1/2 proton E:4.89038375731629 MeV  Gamma:10462.9077788386 keV
+Berggren 22p1/2 proton E:6.7180554256319 MeV  Gamma:10097.999758791 keV
+Berggren 23p1/2 proton E:8.76272404279934 MeV  Gamma:9346.90564565263 keV
+Berggren 24p1/2 proton E:10.9492754050092 MeV  Gamma:8217.45754573441 keV
+Berggren 25p1/2 proton E:13.1795985226082 MeV  Gamma:6778.81232759774 keV
+Berggren 26p1/2 proton E:15.3379957137946 MeV  Gamma:5154.90541549525 keV
+Berggren 27p1/2 proton E:17.2998735526909 MeV  Gamma:3508.83407692834 keV
+Berggren 28p1/2 proton E:18.9427203968355 MeV  Gamma:2020.51595945289 keV
+Berggren 29p1/2 proton E:20.1579837893145 MeV  Gamma:861.061228987483 keV
+Berggren 30p1/2 proton E:20.8624411823125 MeV  Gamma:167.67538498821 keV
+Berggren 31p1/2 proton E:21.9093354920875 MeV  Gamma:-0 keV
+Berggren 32p1/2 proton E:25.8197929041994 MeV  Gamma:-0 keV
+Berggren 33p1/2 proton E:33.4634855996973 MeV  Gamma:-0 keV
+Berggren 34p1/2 proton E:45.7306134877648 MeV  Gamma:-0 keV
+Berggren 35p1/2 proton E:63.5902057356729 MeV  Gamma:-0 keV
+Berggren 36p1/2 proton E:87.8131812708419 MeV  Gamma:-0 keV
+Berggren 37p1/2 proton E:118.697440230844 MeV  Gamma:-0 keV
+Berggren 38p1/2 proton E:155.846669827861 MeV  Gamma:-0 keV
+Berggren 39p1/2 proton E:198.045874165092 MeV  Gamma:-0 keV
+Berggren 40p1/2 proton E:243.261542116255 MeV  Gamma:-0 keV
+Berggren 41p1/2 proton E:288.77448831755 MeV  Gamma:-0 keV
+Berggren 42p1/2 proton E:331.43190498971 MeV  Gamma:-0 keV
+Berggren 43p1/2 proton E:367.985551874641 MeV  Gamma:-0 keV
+Berggren 44p1/2 proton E:395.468694507568 MeV  Gamma:-0 keV
+Berggren 45p1/2 proton E:411.561225793998 MeV  Gamma:-0 keV
+
+
+
+Basis energies neutron space
+----------------------------
+
+HO.shell 0s1/2 neutron E:-8.2943524204641 MeV
+
+Berggren 0p3/2 neutron E:-8.84439056259703 MeV  Gamma:-0 keV
+
+Berggren 0p1/2 neutron E:-1.04360334516969 MeV  Gamma:-0 keV
+
+Berggren 1p3/2 neutron E:0 MeV  Gamma:0.336686894504294 keV
+Berggren 2p3/2 neutron E:0 MeV  Gamma:9.18810449719359 keV
+Berggren 3p3/2 neutron E:0 MeV  Gamma:53.8056890276106 keV
+Berggren 4p3/2 neutron E:0 MeV  Gamma:177.347416705165 keV
+Berggren 5p3/2 neutron E:0 MeV  Gamma:429.826560897059 keV
+Berggren 6p3/2 neutron E:0 MeV  Gamma:857.137740689848 keV
+Berggren 7p3/2 neutron E:0 MeV  Gamma:1490.06378345153 keV
+Berggren 8p3/2 neutron E:0 MeV  Gamma:2335.19055160701 keV
+Berggren 9p3/2 neutron E:0 MeV  Gamma:3369.3699728193 keV
+Berggren 10p3/2 neutron E:0 MeV  Gamma:4538.81174708465 keV
+Berggren 11p3/2 neutron E:0 MeV  Gamma:5763.14185172101 keV
+Berggren 12p3/2 neutron E:0 MeV  Gamma:6943.96118346058 keV
+Berggren 13p3/2 neutron E:0 MeV  Gamma:7976.70168659118 keV
+Berggren 14p3/2 neutron E:0 MeV  Gamma:8764.03598532431 keV
+Berggren 15p3/2 neutron E:0 MeV  Gamma:9228.93985945393 keV
+Berggren 16p3/2 neutron E:0.0843717905723409 MeV  Gamma:9396.16834957334 keV
+Berggren 17p3/2 neutron E:0.446326822573591 MeV  Gamma:9615.34316023412 keV
+Berggren 18p3/2 neutron E:1.10375392341906 MeV  Gamma:9942.08393280506 keV
+Berggren 19p3/2 neutron E:2.06362189228334 MeV  Gamma:10273.141592854 keV
+Berggren 20p3/2 neutron E:3.32795510737587 MeV  Gamma:10484.832542436 keV
+Berggren 21p3/2 neutron E:4.88716945554232 MeV  Gamma:10456.030825065 keV
+Berggren 22p3/2 neutron E:6.71363985038386 MeV  Gamma:10091.3626480551 keV
+Berggren 23p3/2 neutron E:8.75696456852629 MeV  Gamma:9340.76220642804 keV
+Berggren 24p3/2 neutron E:10.9420787764613 MeV  Gamma:8212.05645868735 keV
+Berggren 25p3/2 neutron E:13.1709359699306 MeV  Gamma:6774.35681867016 keV
+Berggren 26p3/2 neutron E:15.3279145117298 MeV  Gamma:5151.51725161202 keV
+Berggren 27p3/2 neutron E:17.288502867483 MeV  Gamma:3506.52782609861 keV
+Berggren 28p3/2 neutron E:18.9302699179371 MeV  Gamma:2019.18793524148 keV
+Berggren 29p3/2 neutron E:20.1447345544346 MeV  Gamma:860.495279407004 keV
+Berggren 30p3/2 neutron E:20.8487289288311 MeV  Gamma:167.565177013915 keV
+Berggren 31p3/2 neutron E:21.8949351465454 MeV  Gamma:-0 keV
+Berggren 32p3/2 neutron E:25.8028223329204 MeV  Gamma:-0 keV
+Berggren 33p3/2 neutron E:33.4414910597054 MeV  Gamma:-0 keV
+Berggren 34p3/2 neutron E:45.7005561345277 MeV  Gamma:-0 keV
+Berggren 35p3/2 neutron E:63.548409811008 MeV  Gamma:-0 keV
+Berggren 36p3/2 neutron E:87.7554643148025 MeV  Gamma:-0 keV
+Berggren 37p3/2 neutron E:118.619423982706 MeV  Gamma:-0 keV
+Berggren 38p3/2 neutron E:155.744236511345 MeV  Gamma:-0 keV
+Berggren 39p3/2 neutron E:197.915704584085 MeV  Gamma:-0 keV
+Berggren 40p3/2 neutron E:243.101653640183 MeV  Gamma:-0 keV
+Berggren 41p3/2 neutron E:288.584685554385 MeV  Gamma:-0 keV
+Berggren 42p3/2 neutron E:331.214064792902 MeV  Gamma:-0 keV
+Berggren 43p3/2 neutron E:367.743686068013 MeV  Gamma:-0 keV
+Berggren 44p3/2 neutron E:395.208764860042 MeV  Gamma:-0 keV
+Berggren 45p3/2 neutron E:411.290719010928 MeV  Gamma:-0 keV
+
+Berggren 1p1/2 neutron E:0 MeV  Gamma:0.336686894504294 keV
+Berggren 2p1/2 neutron E:0 MeV  Gamma:9.18810449719359 keV
+Berggren 3p1/2 neutron E:0 MeV  Gamma:53.8056890276106 keV
+Berggren 4p1/2 neutron E:0 MeV  Gamma:177.347416705165 keV
+Berggren 5p1/2 neutron E:0 MeV  Gamma:429.826560897059 keV
+Berggren 6p1/2 neutron E:0 MeV  Gamma:857.137740689848 keV
+Berggren 7p1/2 neutron E:0 MeV  Gamma:1490.06378345153 keV
+Berggren 8p1/2 neutron E:0 MeV  Gamma:2335.19055160701 keV
+Berggren 9p1/2 neutron E:0 MeV  Gamma:3369.3699728193 keV
+Berggren 10p1/2 neutron E:0 MeV  Gamma:4538.81174708465 keV
+Berggren 11p1/2 neutron E:0 MeV  Gamma:5763.14185172101 keV
+Berggren 12p1/2 neutron E:0 MeV  Gamma:6943.96118346058 keV
+Berggren 13p1/2 neutron E:0 MeV  Gamma:7976.70168659118 keV
+Berggren 14p1/2 neutron E:0 MeV  Gamma:8764.03598532431 keV
+Berggren 15p1/2 neutron E:0 MeV  Gamma:9228.93985945393 keV
+Berggren 16p1/2 neutron E:0.0843717905723409 MeV  Gamma:9396.16834957334 keV
+Berggren 17p1/2 neutron E:0.446326822573591 MeV  Gamma:9615.34316023412 keV
+Berggren 18p1/2 neutron E:1.10375392341906 MeV  Gamma:9942.08393280506 keV
+Berggren 19p1/2 neutron E:2.06362189228334 MeV  Gamma:10273.141592854 keV
+Berggren 20p1/2 neutron E:3.32795510737587 MeV  Gamma:10484.832542436 keV
+Berggren 21p1/2 neutron E:4.88716945554232 MeV  Gamma:10456.030825065 keV
+Berggren 22p1/2 neutron E:6.71363985038386 MeV  Gamma:10091.3626480551 keV
+Berggren 23p1/2 neutron E:8.75696456852629 MeV  Gamma:9340.76220642804 keV
+Berggren 24p1/2 neutron E:10.9420787764613 MeV  Gamma:8212.05645868735 keV
+Berggren 25p1/2 neutron E:13.1709359699306 MeV  Gamma:6774.35681867016 keV
+Berggren 26p1/2 neutron E:15.3279145117298 MeV  Gamma:5151.51725161202 keV
+Berggren 27p1/2 neutron E:17.288502867483 MeV  Gamma:3506.52782609861 keV
+Berggren 28p1/2 neutron E:18.9302699179371 MeV  Gamma:2019.18793524148 keV
+Berggren 29p1/2 neutron E:20.1447345544346 MeV  Gamma:860.495279407004 keV
+Berggren 30p1/2 neutron E:20.8487289288311 MeV  Gamma:167.565177013915 keV
+Berggren 31p1/2 neutron E:21.8949351465454 MeV  Gamma:-0 keV
+Berggren 32p1/2 neutron E:25.8028223329204 MeV  Gamma:-0 keV
+Berggren 33p1/2 neutron E:33.4414910597054 MeV  Gamma:-0 keV
+Berggren 34p1/2 neutron E:45.7005561345277 MeV  Gamma:-0 keV
+Berggren 35p1/2 neutron E:63.548409811008 MeV  Gamma:-0 keV
+Berggren 36p1/2 neutron E:87.7554643148025 MeV  Gamma:-0 keV
+Berggren 37p1/2 neutron E:118.619423982706 MeV  Gamma:-0 keV
+Berggren 38p1/2 neutron E:155.744236511345 MeV  Gamma:-0 keV
+Berggren 39p1/2 neutron E:197.915704584085 MeV  Gamma:-0 keV
+Berggren 40p1/2 neutron E:243.101653640183 MeV  Gamma:-0 keV
+Berggren 41p1/2 neutron E:288.584685554385 MeV  Gamma:-0 keV
+Berggren 42p1/2 neutron E:331.214064792902 MeV  Gamma:-0 keV
+Berggren 43p1/2 neutron E:367.743686068013 MeV  Gamma:-0 keV
+Berggren 44p1/2 neutron E:395.208764860042 MeV  Gamma:-0 keV
+Berggren 45p1/2 neutron E:411.290719010928 MeV  Gamma:-0 keV
+
+
+Coupled TBMEs pn : 1078.36988275875 Mb
+
+Coupled TBMEs mixed pn : 147.737963997653 Mb
+
+Coupled mixed pn TBMEs calculated. time:0.693006203975528 s
+
+Coupled TBMEs pn calculated. time:8.23904278501868 s
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+OBMEs and TBMEs calculated. time:10.0951174449874 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Configurations proton space
+-----------------------------
+
+proton array of configuration: 9.6e-05 Mb
+
+proton array of configuration: 0.00028 Mb
+
+
+Slater determinants proton space
+---------------------------------
+
+proton space array of SD: 9.6e-05 Mb
+
+proton space array of SD: 0.000648000000000003 Mb
+
+
+Configurations neutron space
+-----------------------------
+
+neutron array of configuration: 9.6e-05 Mb
+
+neutron array of configuration: 0.00028 Mb
+
+
+Slater determinants neutron space
+---------------------------------
+
+neutron space array of SD: 9.6e-05 Mb
+
+neutron space array of SD: 0.000648000000000003 Mb
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Configurations and Slater determinants built. time:0.126044264994562 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Pole approximation dimensions for starting point
+------------------------------------------------
+
+0+: dimension(J)=2 dimension(M)=10
+1+: dimension(J)=4 dimension(M)=8
+2+: dimension(J)=3 dimension(M)=4
+3+: dimension(J)=1 dimension(M)=1
+
+
+
+
+
+Full space dimensions
+---------------------
+
+0+: dimension(J)=4232 dimension(M)=21160
+1+: dimension(J)=8464 dimension(M)=16928
+2+: dimension(J)=6348 dimension(M)=8464
+3+: dimension(J)=2116 dimension(M)=2116
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Space dimensions calculated
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Pole approximation spectrum
+---------------------------
+
+Z:3 N:3   J Pi (index):1+(0)   E:-0.545999243009081 MeV   E:0 MeV
+Z:3 N:3   J Pi (index):3+(0)   E:-0.238959247428401 MeV   E:0.30703999558068 MeV
+Z:3 N:3   J Pi (index):0+(0)   E:0.692063314993368 MeV   E:1.23806255800245 MeV
+Z:3 N:3   J Pi (index):2+(0)   E:3.71893904047344 MeV   E:4.26493828348252 MeV
+Z:3 N:3   J Pi (index):2+(1)   E:4.13728568932612 MeV   E:4.6832849323352 MeV
+Z:3 N:3   J Pi (index):1+(1)   E:8.23504920855944 MeV   E:8.78104845156852 MeV
+
+
+1+(0) GSM vectors calculated for all M values
+----------------------------------------------------
+
+GSM eigenvector 1+(0) (M=1) calculated and stored. Precision : 3.33066907387547e-16
+GSM eigenvector 1+(0) (M<0) calculated and stored
+
+
+1+(1) GSM vectors calculated for all M values
+----------------------------------------------------
+
+GSM eigenvector 1+(1) (M=1) calculated and stored. Precision : 9.99200722162641e-15
+GSM eigenvector 1+(1) (M<0) calculated and stored
+
+
+3+(0) GSM vectors calculated for all M values
+----------------------------------------------------
+
+GSM eigenvector 3+(0) (M=2) calculated and stored. Precision : 0
+GSM eigenvector 3+(0) (M=1) calculated and stored. Precision : 0
+GSM eigenvector 3+(0) (M=0) calculated and stored. Precision : 0
+GSM eigenvector 3+(0) (M<0) calculated and stored
+
+
+0+(0) GSM vectors calculated for all M values
+----------------------------------------------------
+
+
+2+(0) GSM vectors calculated for all M values
+----------------------------------------------------
+
+GSM eigenvector 2+(0) (M=1) calculated and stored. Precision : 4.44089209850063e-16
+GSM eigenvector 2+(0) (M=0) calculated and stored. Precision : 4.44089209850063e-16
+GSM eigenvector 2+(0) (M<0) calculated and stored
+
+
+2+(1) GSM vectors calculated for all M values
+----------------------------------------------------
+
+GSM eigenvector 2+(1) (M=1) calculated and stored. Precision : 2.22044604925031e-16
+GSM eigenvector 2+(1) (M=0) calculated and stored. Precision : 2.22044604925031e-16
+GSM eigenvector 2+(1) (M<0) calculated and stored
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Eigenvectors calculated (pole approximation). time:0.168802294065244 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Full space
+----------
+
+
+Number of non zeros H NBMEs calculated and stored. time:0.15164369402919 s
+
+
+H memory min used by a process        : 233.652968000002 Mb
+H memory max used by a process        : 454.584431999938 Mb
+H memory average for all processes    : 308.031557333314 Mb
+H memory dispersion for all processes : 126.761258603753 Mb
+
+
+Off diagonal non zero NBMEs equivalent memory min used by a process        : 1790.81312 Mb
+Off diagonal non zero NBMEs equivalent memory max used by a process        : 3581.9648 Mb
+Off diagonal non zero NBMEs equivalent memory average for all processes    : 2387.86368 Mb
+Off diagonal non zero NBMEs equivalent memory dispersion for all processes : 1034.12190460745 Mb
+
+H non zero NBMEs number:223883380
+H non zero NBMEs proportion:50.0023629489603%
+
+Maximal initial memory of all GSM vectors for a process before the Lanczos/Davidson method:1.186136 Mb
+Allowed maximal memory of all GSM vectors for a process during the Lanczos/Davidson method:51.989336 Mb
+
+
+1+(0) Z:3 , N:3
+--------------------
+
+Iteration 1  E:-2.23648149 MeV G:1.273725894 keV test:0.2529348158  time:1.114525512 s
+Iteration 2  E:-2.480942597 MeV G:-1.219282907 keV test:0.09441108382  time:1.13837378 s
+Iteration 3  E:-2.515901068 MeV G:-0.7931417415 keV test:0.03969052262  time:1.135065185 s
+Iteration 4  E:-2.523056341 MeV G:0.009399613285 keV test:0.01775966871  time:1.162160094 s
+Iteration 5  E:-2.524356189 MeV G:0.01644952325 keV test:0.007620955308  time:1.146719874 s
+Iteration 6  E:-2.524561643 MeV G:0.01076653897 keV test:0.002856244306  time:1.140857469 s
+Iteration 7  E:-2.524600562 MeV G:0.05954010744 keV test:0.001522426899  time:1.117946882 s
+Iteration 8  E:-2.524584958 MeV G:0.02937414537 keV test:0.001075063109  time:1.134901819 s
+Iteration 9  E:-2.52458498 MeV G:0.032995143 keV test:0.0002334754719  time:1.143606836 s
+Iteration 10  E:-2.524584929 MeV G:0.03309529435 keV test:4.403148478e-05  time:1.146932524 s
+Iteration 11  E:-2.524584928 MeV G:0.03308527508 keV test:2.628901686e-05  time:1.1629819 s
+Iteration 12  E:-2.524584931 MeV G:0.03307318143 keV test:2.286797602e-05  time:1.148018325 s
+Iteration 13  E:-2.524584929 MeV G:0.03307308478 keV test:6.370065281e-06  time:1.127386219 s
+Iteration 14  E:-2.524584929 MeV G:0.03307304118 keV test:1.406584101e-06  time:1.109434009 s
+Iteration 15  E:-2.524584929 MeV G:0.03307302679 keV test:6.390478395e-07  time:1.121133942 s
+Iteration 16  E:-2.524584929 MeV G:0.03307302395 keV test:1.020525454e-07  time:1.15447056 s
+Iteration 17  E:-2.524584929 MeV G:0.03307302417 keV test:1.775069153e-07  time:1.131315774 s
+Iteration 18  E:-2.524584929 MeV G:0.03307302451 keV test:3.301478194e-08  time:1.118036403 s
+Iteration 19  E:-2.524584929 MeV G:0.03307302379 keV test:2.087093171e-08  time:1.117447738 s
+Iteration 20  E:-2.524584929 MeV G:0.03307302241 keV test:3.67739982e-09  time:1.200638957 s
+Iteration 21  E:-2.524584929 MeV G:0.03307302369 keV test:3.093915685e-09  time:1.196486486 s
+Iteration 22  E:-2.524584929 MeV G:0.03307302207 keV test:8.848248928e-10  time:1.183175425 s
+Iteration 23  E:-2.524584929 MeV G:0.03307302391 keV test:8.528659721e-10  time:1.157341947 s
+Iteration 24  E:-2.524584929 MeV G:0.03307302575 keV test:1.908846493e-10  time:1.12023697 s
+Iteration 25  E:-2.524584929 MeV G:0.03307302325 keV test:6.204596894e-11  time:1.11603748 s
+
+
+Expectation values
+------------------
+
+|J^2.PSI - J(J+1).PSI|oo = 9.99200722162641e-16
+
+|H.PSI - E.PSI|oo = 7.01026348082223e-10
+
+<T> = (-0.00193753538680863,0.00237203076233064)
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion)
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut)
+
+E:(-2.52458492932445,-1.65365116231397e-05)  J Pi:1+
+
+
+
+
+1+(1) Z:3 , N:3
+--------------------
+
+Iteration 1  E:3.75970737 MeV G:2204.881423 keV test:0.4642829276  time:1.204302473 s
+Iteration 2  E:3.023828998 MeV G:3989.3943 keV test:0.5037001454  time:1.110892133 s
+Iteration 3  E:3.16995992 MeV G:3235.002979 keV test:0.1245927036  time:1.107660612 s
+Iteration 4  E:2.961654709 MeV G:3303.66153 keV test:0.3137797489  time:1.120194683 s
+Iteration 5  E:3.1887121 MeV G:3238.112317 keV test:0.02702324479  time:1.138468168 s
+Iteration 6  E:3.138414392 MeV G:3855.254861 keV test:1.259795257  time:1.12647273 s
+Iteration 7  E:5.250560877 MeV G:3037.258366 keV test:0.3754816033  time:1.142196523 s
+Iteration 8  E:3.85319201 MeV G:3572.452637 keV test:0.8694944439  time:1.168806712 s
+Iteration 9  E:4.686890953 MeV G:4600.792315 keV test:0.09761073885  time:1.120521959 s
+Iteration 10  E:4.381607273 MeV G:2698.161933 keV test:0.7850724503  time:1.125671044 s
+Iteration 11  E:4.250608957 MeV G:4023.607157 keV test:0.5084566771  time:1.176143398 s
+Iteration 12  E:4.108655387 MeV G:3826.02464 keV test:0.2255815499  time:1.200864637 s
+Iteration 13  E:3.1765263 MeV G:2784.304078 keV test:0.3995004488  time:1.156692872 s
+Iteration 14  E:3.786471178 MeV G:2111.625301 keV test:0.4864916736  time:1.117006505 s
+Iteration 15  E:3.756275319 MeV G:2081.048174 keV test:0.05369373862  time:1.157380164 s
+Iteration 16  E:2.332591704 MeV G:2842.388686 keV test:0.2663056549  time:1.135478643 s
+Iteration 17  E:2.732902468 MeV G:2992.989129 keV test:0.06146358087  time:1.142879931 s
+Iteration 18  E:2.598029792 MeV G:3068.301278 keV test:0.04261395929  time:1.163374779 s
+Iteration 19  E:2.5820621 MeV G:3180.336455 keV test:0.2393126461  time:1.119088969 s
+Iteration 20  E:2.847824002 MeV G:3107.605085 keV test:0.1237791076  time:1.139998557 s
+Iteration 21  E:3.404566796 MeV G:3080.286956 keV test:0.7037984398  time:1.122483188 s
+Iteration 22  E:4.399769714 MeV G:2418.49226 keV test:0.0687734643  time:1.117669424 s
+Iteration 23  E:4.455781778 MeV G:3362.67613 keV test:2.028208189  time:1.135758692 s
+Iteration 24  E:2.49370069 MeV G:3431.631229 keV test:0.241581116  time:1.151336271 s
+Iteration 25  E:2.312596815 MeV G:3318.770408 keV test:0.1041101118  time:1.127549348 s
+Iteration 26  E:2.444681506 MeV G:3374.328374 keV test:0.04011089244  time:1.115859454 s
+Iteration 27  E:3.066432699 MeV G:1617.43922 keV test:0.3878225784  time:1.145331419 s
+Iteration 28  E:3.261381922 MeV G:3318.604227 keV test:0.95552285  time:1.132699726 s
+Iteration 29  E:3.627975079 MeV G:4939.675607 keV test:0.2761613289  time:1.211169165 s
+Iteration 30  E:1.924720978 MeV G:3307.863827 keV test:0.4036300187  time:1.119312523 s
+Iteration 31  E:4.163377996 MeV G:2925.366512 keV test:0.3296446756  time:1.120080126 s
+Iteration 32  E:1.643206949 MeV G:3113.013598 keV test:0.3540222429  time:1.142763758 s
+Iteration 33  E:3.968524447 MeV G:3109.59783 keV test:0.1067565556  time:1.126086993 s
+Iteration 34  E:3.765868225 MeV G:3189.027474 keV test:0.132453961  time:1.146453831 s
+Iteration 35  E:3.612400039 MeV G:2645.806823 keV test:0.1773931788  time:1.117976655 s
+Iteration 36  E:3.5352749 MeV G:2732.770096 keV test:0.1201121807  time:1.135119214 s
+Iteration 37  E:3.06791766 MeV G:2504.259037 keV test:0.08637271458  time:1.119470352 s
+Iteration 38  E:3.904567495 MeV G:12653.27819 keV test:0.553160508  time:1.156366397 s
+Iteration 39  E:4.181827968 MeV G:13083.59298 keV test:0.2247155562  time:1.124675202 s
+Iteration 40  E:2.729442276 MeV G:2819.65176 keV test:0.1415396623  time:1.130015967 s
+Iteration 41  E:3.128210559 MeV G:3007.828534 keV test:0.2006755708  time:1.128896684 s
+Iteration 42  E:4.243076495 MeV G:4784.093869 keV test:0.2825860693  time:1.165019136 s
+Iteration 43  E:4.307338458 MeV G:6320.357236 keV test:0.8076652168  time:1.120028552 s
+Iteration 44  E:3.949443523 MeV G:5783.939153 keV test:0.3172603639  time:1.180915785 s
+Iteration 45  E:4.291535408 MeV G:4468.503118 keV test:0.1992362882  time:1.311661558 s
+Iteration 46  E:4.206658368 MeV G:4641.396943 keV test:0.0855623694  time:1.132478667 s
+Iteration 47  E:2.758696828 MeV G:5573.094847 keV test:0.6228172395  time:1.13198529 s
+Iteration 48  E:2.688728694 MeV G:8448.634067 keV test:0.5368436025  time:1.119130157 s
+Iteration 49  E:3.204459142 MeV G:6319.74334 keV test:0.07643943493  time:1.118873424 s
+Iteration 50  E:3.201616515 MeV G:6319.373441 keV test:0.0302377465  time:1.119909171 s
+Iteration 51  E:2.714554946 MeV G:6021.327782 keV test:0.343456508  time:1.129782642 s
+Iteration 52  E:2.28574325 MeV G:6600.618179 keV test:0.2484992181  time:1.126734426 s
+Iteration 53  E:3.010679662 MeV G:3179.247321 keV test:0.0974576998  time:1.132564099 s
+Iteration 54  E:4.215135127 MeV G:9254.738535 keV test:0.4110180258  time:1.122368833 s
+Iteration 55  E:4.21847725 MeV G:8365.108952 keV test:0.7632510524  time:1.119261505 s
+Iteration 56  E:2.657374452 MeV G:6604.859146 keV test:0.5810014985  time:1.13230328 s
+Iteration 57  E:2.312693743 MeV G:5273.586246 keV test:0.9359397394  time:1.123556736 s
+Iteration 58  E:3.60503757 MeV G:7225.264208 keV test:0.04270340855  time:1.125302106 s
+Iteration 59  E:2.526280884 MeV G:4119.703261 keV test:0.6421757543  time:1.140280129 s
+Iteration 60  E:2.80257341 MeV G:4961.22623 keV test:0.06361587718  time:1.126760597 s
+Iteration 61  E:4.124876748 MeV G:7181.303236 keV test:0.3172086339  time:1.127829715 s
+Iteration 62  E:4.037514483 MeV G:7064.633785 keV test:0.1028120184  time:1.118816932 s
+Iteration 63  E:3.999446518 MeV G:7055.587935 keV test:0.09961631244  time:1.126331521 s
+Iteration 64  E:3.175552147 MeV G:5413.398945 keV test:0.0788065272  time:1.125779604 s
+Iteration 65  E:3.235233361 MeV G:5411.974897 keV test:0.2069468992  time:1.127066593 s
+Iteration 66  E:3.8161695 MeV G:7882.167068 keV test:0.1663881812  time:1.16211131 s
+Iteration 67  E:2.761913783 MeV G:3663.159411 keV test:0.2034994858  time:1.168558935 s
+Iteration 68  E:2.482428205 MeV G:3669.978653 keV test:0.2542861752  time:1.219903328 s
+Iteration 69  E:2.676468775 MeV G:4411.462531 keV test:0.2455290455  time:1.131948427 s
+Iteration 70  E:2.815351303 MeV G:4320.810077 keV test:0.1323963244  time:1.142783416 s
+Iteration 71  E:2.766902387 MeV G:4809.892312 keV test:0.07704787623  time:1.139153015 s
+Iteration 72  E:2.789647791 MeV G:4510.267866 keV test:0.2243089994  time:1.146485061 s
+Iteration 73  E:2.775878362 MeV G:4524.449465 keV test:0.05424284025  time:1.295141097 s
+Iteration 74  E:2.696220602 MeV G:4402.108008 keV test:0.08017599665  time:1.302002389 s
+Iteration 75  E:2.861631425 MeV G:4493.701013 keV test:0.2146016795  time:1.226254023 s
+Iteration 76  E:2.82185748 MeV G:4379.636904 keV test:0.03524318524  time:1.145130046 s
+Iteration 77  E:2.83996528 MeV G:4461.010661 keV test:0.1468516423  time:1.137433275 s
+Iteration 78  E:2.74578475 MeV G:4328.777765 keV test:0.06673641154  time:1.136922866 s
+Iteration 79  E:4.293085604 MeV G:7999.467333 keV test:0.132785612  time:1.176692231 s
+Iteration 80  E:2.662915838 MeV G:4374.931888 keV test:0.03160849016  time:1.170187248 s
+Iteration 81  E:2.701828587 MeV G:4554.258054 keV test:0.1390245311  time:1.131804199 s
+Iteration 82  E:2.710153173 MeV G:4473.909434 keV test:0.08939565979  time:1.13556683 s
+Iteration 83  E:2.691168922 MeV G:4485.282504 keV test:0.05282114874  time:1.14211307 s
+Iteration 84  E:2.69294832 MeV G:4485.396534 keV test:0.01484290948  time:1.1693726 s
+Iteration 85  E:2.696517824 MeV G:4485.1592 keV test:0.01921635476  time:1.302962517 s
+Iteration 86  E:2.697860667 MeV G:4485.250589 keV test:0.003463234296  time:1.195007417 s
+Iteration 87  E:2.71612584 MeV G:4469.920761 keV test:0.03531444806  time:1.149070484 s
+Iteration 88  E:4.049560105 MeV G:7662.1996 keV test:0.4119790388  time:1.141836322 s
+Iteration 89  E:3.872065439 MeV G:6488.275817 keV test:0.3589899621  time:1.161384061 s
+Iteration 90  E:2.833766098 MeV G:4447.057824 keV test:0.07361952141  time:1.221617336 s
+Iteration 91  E:3.33878187 MeV G:8300.028681 keV test:0.5536803309  time:1.313368392 s
+Iteration 92  E:3.896967107 MeV G:9415.262998 keV test:0.3276898346  time:1.155515606 s
+Iteration 93  E:3.73642334 MeV G:7691.421957 keV test:0.4230711498  time:1.155905067 s
+Iteration 94  E:4.217632005 MeV G:8626.100061 keV test:0.07511909523  time:1.159484503 s
+Iteration 95  E:2.790625971 MeV G:4638.971347 keV test:0.04566133969  time:1.225322289 s
+Iteration 96  E:2.764931455 MeV G:4662.68064 keV test:0.06900744456  time:1.233823954 s
+Iteration 97  E:2.788768659 MeV G:4632.719631 keV test:0.06391324909  time:1.225331918 s
+Iteration 98  E:4.316747493 MeV G:7062.378559 keV test:0.171876716  time:1.201506101 s
+Iteration 99  E:2.815067449 MeV G:4680.66381 keV test:0.1436607367  time:1.153541068 s
+Iteration 100  E:2.809577863 MeV G:4752.799607 keV test:0.02961052703  time:1.228074974 s
+Iteration 101  E:2.669017255 MeV G:4659.644531 keV test:0.290747374  time:1.2922102 s
+Iteration 102  E:2.708634335 MeV G:4633.366208 keV test:0.05763542675  time:1.147743916 s
+Iteration 103  E:2.771727651 MeV G:4619.343326 keV test:0.1176680882  time:1.153870388 s
+Iteration 104  E:2.708932086 MeV G:4402.408581 keV test:0.1033731793  time:1.197868559 s
+Iteration 105  E:2.737137489 MeV G:4477.645679 keV test:0.2199666908  time:1.139154959 s
+Iteration 106  E:2.744906612 MeV G:4459.691897 keV test:0.04192409318  time:1.299488337 s
+Iteration 107  E:2.94975499 MeV G:8090.238181 keV test:0.1988433144  time:1.154326978 s
+Iteration 108  E:2.705188341 MeV G:4488.684811 keV test:0.04936255354  time:1.256741429 s
+Iteration 109  E:2.686483981 MeV G:4499.3714 keV test:0.03666183152  time:1.187436549 s
+Iteration 110  E:3.784298689 MeV G:6846.784461 keV test:0.1155916288  time:1.245833935 s
+Iteration 111  E:2.670183372 MeV G:4497.01236 keV test:0.03974270758  time:1.152249445 s
+Iteration 112  E:2.6732627 MeV G:4491.500116 keV test:0.03253202584  time:1.252208072 s
+Iteration 113  E:2.68620322 MeV G:4578.353207 keV test:0.120729344  time:1.244017643 s
+Iteration 114  E:2.673454214 MeV G:4423.690361 keV test:0.07985129346  time:1.244427023 s
+Iteration 115  E:2.673619362 MeV G:4416.965472 keV test:0.02288806734  time:1.170954061 s
+Iteration 116  E:2.73761099 MeV G:4441.547051 keV test:0.06868728039  time:1.244426933 s
+Iteration 117  E:2.688129631 MeV G:4430.717248 keV test:0.2077527667  time:1.256163946 s
+Iteration 118  E:2.708899778 MeV G:4448.076171 keV test:0.0494354921  time:1.183815338 s
+Iteration 119  E:2.71309099 MeV G:4452.961848 keV test:0.02739150413  time:1.190875204 s
+Iteration 120  E:2.712880856 MeV G:4397.122072 keV test:0.07916309886  time:1.246022893 s
+Iteration 121  E:2.733490143 MeV G:4263.37389 keV test:0.1382342755  time:1.167613676 s
+Iteration 122  E:2.698979426 MeV G:4427.868908 keV test:0.01882553578  time:1.171061044 s
+Iteration 123  E:3.898976549 MeV G:7102.005465 keV test:0.01809516087  time:1.277216135 s
+Iteration 124  E:3.90273534 MeV G:7111.137629 keV test:0.02021293189  time:1.217151166 s
+Iteration 125  E:2.691803345 MeV G:4433.173169 keV test:0.04723369562  time:1.164413015 s
+Iteration 126  E:2.692634371 MeV G:4406.9072 keV test:0.08628070645  time:1.17053671 s
+Iteration 127  E:4.158518464 MeV G:6268.831926 keV test:0.2390347415  time:1.333964543 s
+Iteration 128  E:2.680118277 MeV G:4399.690474 keV test:0.01812704693  time:1.179812931 s
+Iteration 129  E:2.665305417 MeV G:4445.432278 keV test:0.08512206477  time:1.194228868 s
+Iteration 130  E:2.70020784 MeV G:4397.407124 keV test:0.06407990488  time:1.194476473 s
+Iteration 131  E:2.733306959 MeV G:4377.393689 keV test:0.1419071066  time:1.211135455 s
+Iteration 132  E:2.709423734 MeV G:4404.692612 keV test:0.08322764875  time:1.197781524 s
+Iteration 133  E:2.699521105 MeV G:4487.116216 keV test:0.03564942917  time:1.179496718 s
+Iteration 134  E:2.685084561 MeV G:4442.088183 keV test:0.05534737032  time:1.18648053 s
+Iteration 135  E:4.942666748 MeV G:7747.098647 keV test:0.1774973204  time:1.189773058 s
+Iteration 136  E:3.35379831 MeV G:4349.025203 keV test:0.484054468  time:1.180560257 s
+Iteration 137  E:3.404696853 MeV G:4428.569848 keV test:0.05856812308  time:1.234560422 s
+Iteration 138  E:2.756174709 MeV G:4272.842086 keV test:0.121984177  time:1.179807704 s
+Iteration 139  E:2.691998698 MeV G:4264.594453 keV test:0.1000485693  time:1.195495641 s
+Iteration 140  E:2.707907633 MeV G:4268.572282 keV test:0.03359519756  time:1.201475498 s
+Iteration 141  E:2.70797498 MeV G:4354.015781 keV test:0.02868727652  time:1.183614698 s
+Iteration 142  E:2.69913873 MeV G:4364.321411 keV test:0.0272404937  time:1.183908892 s
+Iteration 143  E:2.696832599 MeV G:4381.185906 keV test:0.0286802183  time:1.187682292 s
+Iteration 144  E:2.699981632 MeV G:4364.371082 keV test:0.0277835006  time:1.183393223 s
+Iteration 145  E:2.698629301 MeV G:4349.973589 keV test:0.03316231056  time:1.187636036 s
+Iteration 146  E:2.703007428 MeV G:4305.636029 keV test:0.07191150545  time:1.18540813 s
+Iteration 147  E:2.716028679 MeV G:4330.361788 keV test:0.04835691076  time:1.187592074 s
+Iteration 148  E:2.697152441 MeV G:4336.903772 keV test:0.0178208584  time:1.194090133 s
+Iteration 149  E:2.703047918 MeV G:4334.044081 keV test:0.02068671463  time:1.188656504 s
+Iteration 150  E:2.701703149 MeV G:4320.99504 keV test:0.03266794435  time:1.188443866 s
+Iteration 151  E:2.700122279 MeV G:4323.196234 keV test:0.02932509396  time:1.274142851 s
+Iteration 152  E:2.69976412 MeV G:4335.139589 keV test:0.03705878012  time:1.206748149 s
+Iteration 153  E:2.702245347 MeV G:4337.159463 keV test:0.01678253605  time:1.197797972 s
+Iteration 154  E:2.694552157 MeV G:4312.158314 keV test:0.05153614413  time:1.20001052 s
+Iteration 155  E:6.147849394 MeV G:7684.73019 keV test:0.2149691249  time:1.200482557 s
+Iteration 156  E:2.711833398 MeV G:4309.380202 keV test:0.2133035568  time:1.203558357 s
+Iteration 157  E:4.414237879 MeV G:8193.762723 keV test:0.1085060557  time:1.205288357 s
+Iteration 158  E:4.465084599 MeV G:8274.400138 keV test:0.07236780405  time:1.201071314 s
+Iteration 159  E:2.704924333 MeV G:4315.601121 keV test:0.004881171949  time:1.23793489 s
+Iteration 160  E:3.885296595 MeV G:7958.220874 keV test:0.7277811542  time:1.209212272 s
+Iteration 161  E:4.252397237 MeV G:7697.382533 keV test:0.1267779295  time:1.244714128 s
+Iteration 162  E:2.700341973 MeV G:4340.687824 keV test:0.0140882984  time:1.20330363 s
+Iteration 163  E:2.693207917 MeV G:4317.861453 keV test:0.06507598226  time:1.204266359 s
+Iteration 164  E:2.709593574 MeV G:4317.114462 keV test:0.04436983638  time:1.21181889 s
+Iteration 165  E:2.686618851 MeV G:4303.698802 keV test:0.07595449509  time:1.202629504 s
+Iteration 166  E:4.123630585 MeV G:8778.201186 keV test:0.2053892329  time:1.208102709 s
+Iteration 167  E:2.684904035 MeV G:4301.996345 keV test:0.004213724286  time:1.240760562 s
+Iteration 168  E:2.674882012 MeV G:4305.489292 keV test:0.03259968356  time:1.228977252 s
+Iteration 169  E:2.679602501 MeV G:4314.481125 keV test:0.02515635978  time:1.314211444 s
+Iteration 170  E:2.688741659 MeV G:4256.33531 keV test:0.02735247304  time:1.221633924 s
+Iteration 171  E:2.717886306 MeV G:4306.233142 keV test:0.09674201017  time:1.263437172 s
+Iteration 172  E:2.716890419 MeV G:4306.361953 keV test:0.004612855072  time:1.252337025 s
+Iteration 173  E:2.670059892 MeV G:4204.318804 keV test:0.321647991  time:1.21822982 s
+Iteration 174  E:2.686080958 MeV G:4245.527467 keV test:0.04634071964  time:1.217002384 s
+Iteration 175  E:2.705583469 MeV G:4263.692565 keV test:0.04779566617  time:1.235240161 s
+Iteration 176  E:2.691748105 MeV G:4288.725152 keV test:0.05947103226  time:1.31694893 s
+Iteration 177  E:2.679789956 MeV G:4324.526807 keV test:0.04693773253  time:1.334988446 s
+Iteration 178  E:2.73025702 MeV G:4340.108536 keV test:0.09187217278  time:1.224074974 s
+Iteration 179  E:2.736213208 MeV G:4327.19409 keV test:0.02746753862  time:1.232909113 s
+Iteration 180  E:2.71983799 MeV G:4330.486387 keV test:0.09699564774  time:1.250030484 s
+Iteration 181  E:2.726786498 MeV G:4318.223742 keV test:0.009910387506  time:1.307907163 s
+Iteration 182  E:2.721397924 MeV G:4319.776177 keV test:0.03243950413  time:1.233427128 s
+Iteration 183  E:2.715394236 MeV G:4330.099782 keV test:0.03692157255  time:1.316808238 s
+Iteration 184  E:2.732789474 MeV G:4283.340743 keV test:0.06912580661  time:1.326419469 s
+Iteration 185  E:2.715166633 MeV G:4272.065243 keV test:0.06643595418  time:1.281586158 s
+Iteration 186  E:3.22504037 MeV G:8744.419275 keV test:0.09025851939  time:1.242646222 s
+Iteration 187  E:2.707887961 MeV G:4257.463562 keV test:0.0111834827  time:1.256604178 s
+Iteration 188  E:2.716878498 MeV G:4238.065011 keV test:0.1342222977  time:1.24045192 s
+Iteration 189  E:2.702406472 MeV G:4273.063001 keV test:0.01423423104  time:1.247175483 s
+Iteration 190  E:2.701422058 MeV G:4272.280283 keV test:0.01595135047  time:1.289255411 s
+Iteration 191  E:2.708084437 MeV G:4270.754923 keV test:0.008643147444  time:1.325170033 s
+Iteration 192  E:2.707461253 MeV G:4270.865045 keV test:0.008687186661  time:1.334469106 s
+Iteration 193  E:2.704246865 MeV G:4274.325129 keV test:0.01111209121  time:1.278223984 s
+Iteration 194  E:2.704572139 MeV G:4279.373798 keV test:0.03815732462  time:1.355011766 s
+Iteration 195  E:2.704701264 MeV G:4278.237043 keV test:0.007168779668  time:1.336084913 s
+Iteration 196  E:2.702699602 MeV G:4280.15041 keV test:0.02531477621  time:1.341236223 s
+Iteration 197  E:2.704158362 MeV G:4283.37316 keV test:0.01465864402  time:1.269947604 s
+Iteration 198  E:2.703271708 MeV G:4285.456572 keV test:0.0174065784  time:1.370832715 s
+Iteration 199  E:2.695824367 MeV G:4293.98345 keV test:0.02283671094  time:1.341028915 s
+Iteration 200  E:2.698484746 MeV G:4280.755562 keV test:0.04837731117  time:1.352881396 s
+Iteration 201  E:2.698325291 MeV G:4282.989913 keV test:0.01438738215  time:1.273351632 s
+Iteration 202  E:2.701628321 MeV G:4280.562071 keV test:0.01557208907  time:1.314078196 s
+Iteration 203  E:2.702245803 MeV G:4284.638347 keV test:0.01772554008  time:1.276037359 s
+Iteration 204  E:2.702961769 MeV G:4286.056809 keV test:0.005987899968  time:1.283385446 s
+Iteration 205  E:2.70285746 MeV G:4285.38944 keV test:0.01000575657  time:1.367122186 s
+Iteration 206  E:2.702890296 MeV G:4285.196097 keV test:0.002334737734  time:1.291223074 s
+Iteration 207  E:2.702868501 MeV G:4285.140724 keV test:0.004401275959  time:1.309120943 s
+Iteration 208  E:2.702863398 MeV G:4285.216002 keV test:0.004026489554  time:1.269340508 s
+Iteration 209  E:2.702875595 MeV G:4285.264326 keV test:0.003101622107  time:1.302864438 s
+Iteration 210  E:2.702885846 MeV G:4285.172302 keV test:0.00122048968  time:1.38120557 s
+Iteration 211  E:2.702887659 MeV G:4285.169109 keV test:0.0004633430058  time:1.422391518 s
+Iteration 212  E:2.702869582 MeV G:4285.207887 keV test:0.0007474410477  time:1.349931057 s
+Iteration 213  E:2.702830496 MeV G:4285.445053 keV test:0.01112633178  time:1.300710383 s
+Iteration 214  E:2.70282336 MeV G:4285.24407 keV test:0.006806101045  time:1.295582328 s
+Iteration 215  E:2.70285106 MeV G:4285.279848 keV test:0.00244870261  time:1.295700801 s
+Iteration 216  E:2.702618675 MeV G:4285.192387 keV test:0.00239143237  time:1.370335287 s
+Iteration 217  E:2.702775853 MeV G:4285.074931 keV test:0.00587473745  time:1.296307502 s
+Iteration 218  E:2.702748015 MeV G:4284.861806 keV test:0.007079566208  time:1.387782622 s
+Iteration 219  E:2.702864455 MeV G:4285.5375 keV test:0.0009972040597  time:1.478745248 s
+Iteration 220  E:2.702816366 MeV G:4285.696238 keV test:0.006319986982  time:1.443122505 s
+Iteration 221  E:2.702900633 MeV G:4285.656518 keV test:0.001201216541  time:1.43880897 s
+Iteration 222  E:2.702866195 MeV G:4285.601867 keV test:0.003616751395  time:1.417359407 s
+Iteration 223  E:2.702812723 MeV G:4285.571005 keV test:0.001211106934  time:1.46596657 s
+Iteration 224  E:2.70292495 MeV G:4285.589509 keV test:0.001148253945  time:1.420017412 s
+Iteration 225  E:2.702922151 MeV G:4285.590111 keV test:0.0007316750843  time:1.448482779 s
+Iteration 226  E:2.70291957 MeV G:4285.580761 keV test:0.0005274757971  time:1.560862799 s
+Iteration 227  E:2.70291918 MeV G:4285.577532 keV test:0.0004909156019  time:1.42910488 s
+Iteration 228  E:2.702917207 MeV G:4285.583042 keV test:0.0005695271025  time:1.434704141 s
+Iteration 229  E:4.96950655 MeV G:8833.338215 keV test:0.3023703469  time:1.448697124 s
+Iteration 230  E:2.702921138 MeV G:4285.581507 keV test:0.0003230423999  time:1.447823903 s
+Iteration 231  E:2.70291543 MeV G:4285.593889 keV test:0.0008514217017  time:1.441634864 s
+Iteration 232  E:2.702912293 MeV G:4285.588709 keV test:0.0006916208937  time:1.443494029 s
+Iteration 233  E:2.702911941 MeV G:4285.587958 keV test:0.0001829394206  time:1.468773789 s
+Iteration 234  E:2.702911415 MeV G:4285.586703 keV test:0.0003689636371  time:1.459372354 s
+Iteration 235  E:2.70291133 MeV G:4285.587925 keV test:0.0001891837682  time:1.524201287 s
+Iteration 236  E:2.702911356 MeV G:4285.588687 keV test:0.0003909805192  time:1.509271305 s
+Iteration 237  E:2.702911729 MeV G:4285.587664 keV test:9.389776923e-05  time:1.461716049 s
+Iteration 238  E:2.702909083 MeV G:4285.587582 keV test:0.002189492689  time:1.557513913 s
+Iteration 239  E:2.702910942 MeV G:4285.590159 keV test:0.0003180961383  time:1.59878939 s
+Iteration 240  E:2.702911432 MeV G:4285.587143 keV test:0.001176852416  time:1.506685047 s
+Iteration 241  E:2.702912061 MeV G:4285.588289 keV test:0.0002724046842  time:1.508837463 s
+Iteration 242  E:2.702911975 MeV G:4285.589176 keV test:0.0002192658237  time:1.521623979 s
+Iteration 243  E:2.702911979 MeV G:4285.588944 keV test:3.390222391e-05  time:1.59701633 s
+Iteration 244  E:2.702912015 MeV G:4285.588995 keV test:5.793689335e-05  time:1.611043869 s
+Iteration 245  E:2.702912487 MeV G:4285.588825 keV test:0.000440346456  time:1.540553549 s
+Iteration 246  E:2.702912716 MeV G:4285.588731 keV test:0.0002247447102  time:1.522759194 s
+Iteration 247  E:2.702913204 MeV G:4285.588713 keV test:0.0003182320161  time:1.618665871 s
+Iteration 248  E:2.702912545 MeV G:4285.589017 keV test:0.0003524876299  time:1.571246552 s
+Iteration 249  E:2.702912423 MeV G:4285.589413 keV test:0.0003236526812  time:1.51595509 s
+Iteration 250  E:2.702912515 MeV G:4285.589313 keV test:4.571337473e-05  time:1.589979873 s
+Iteration 251  E:2.702912554 MeV G:4285.589637 keV test:0.0001070870171  time:1.536570268 s
+Iteration 252  E:2.70291239 MeV G:4285.589208 keV test:0.0001913899216  time:1.561544144 s
+Iteration 253  E:2.702912333 MeV G:4285.589246 keV test:3.126162289e-05  time:1.533123432 s
+Iteration 254  E:2.702912342 MeV G:4285.589256 keV test:2.400333241e-05  time:1.543487867 s
+Iteration 255  E:2.702912338 MeV G:4285.589218 keV test:4.653096572e-05  time:1.56792775 s
+Iteration 256  E:2.702912314 MeV G:4285.589254 keV test:1.850694511e-05  time:1.62306914 s
+Iteration 257  E:2.702912347 MeV G:4285.589243 keV test:2.270316595e-05  time:1.642490383 s
+Iteration 258  E:2.702912317 MeV G:4285.589248 keV test:2.240164839e-05  time:1.641701512 s
+Iteration 259  E:2.702912313 MeV G:4285.589256 keV test:1.562436759e-05  time:1.638088654 s
+Iteration 260  E:2.702912331 MeV G:4285.589279 keV test:2.575358282e-05  time:1.591063053 s
+Iteration 261  E:2.702912314 MeV G:4285.58928 keV test:6.450804384e-05  time:1.592585605 s
+Iteration 262  E:2.702912331 MeV G:4285.589264 keV test:1.364622874e-05  time:1.567674387 s
+Iteration 263  E:2.702912043 MeV G:4285.587641 keV test:2.208506517e-05  time:1.576869465 s
+Iteration 264  E:2.702912324 MeV G:4285.589262 keV test:1.13798946e-05  time:1.590765687 s
+Iteration 265  E:2.702912325 MeV G:4285.589249 keV test:7.205412644e-06  time:1.587462582 s
+Iteration 266  E:2.702912318 MeV G:4285.589257 keV test:5.767074834e-06  time:1.609497255 s
+Iteration 267  E:2.702912324 MeV G:4285.589261 keV test:1.344427507e-05  time:1.613121686 s
+Iteration 268  E:2.702912243 MeV G:4285.589393 keV test:4.551133109e-06  time:1.596005084 s
+Iteration 269  E:2.702912379 MeV G:4285.5893 keV test:1.539797674e-06  time:1.617008229 s
+Iteration 270  E:2.702912294 MeV G:4285.589283 keV test:4.799403695e-07  time:1.621451038 s
+Iteration 271  E:2.702912301 MeV G:4285.589267 keV test:3.974580565e-06  time:1.709547542 s
+Iteration 272  E:2.702912322 MeV G:4285.589261 keV test:9.92613124e-07  time:1.631549544 s
+Iteration 273  E:5.217649668 MeV G:11658.09725 keV test:0.5251154853  time:1.635245018 s
+Iteration 274  E:2.702912329 MeV G:4285.58928 keV test:1.050554749e-06  time:1.630610731 s
+Iteration 275  E:2.702912317 MeV G:4285.589263 keV test:3.10502894e-06  time:1.632954415 s
+Iteration 276  E:2.702912325 MeV G:4285.589238 keV test:1.325886033e-06  time:1.780329324 s
+Iteration 277  E:2.702912315 MeV G:4285.589299 keV test:7.733779376e-07  time:1.732106463 s
+Iteration 278  E:2.702912325 MeV G:4285.58927 keV test:1.041582068e-06  time:1.780640039 s
+Iteration 279  E:2.702912295 MeV G:4285.589215 keV test:2.274456844e-07  time:1.712363619 s
+Iteration 280  E:2.702912272 MeV G:4285.589115 keV test:1.422286414e-07  time:1.717395483 s
+Iteration 281  E:2.702912327 MeV G:4285.589271 keV test:3.588170601e-07  time:1.715145477 s
+Iteration 282  E:2.576270721 MeV G:7522.284756 keV test:0.2496364606  time:1.805207744 s
+Iteration 283  E:2.702912315 MeV G:4285.589211 keV test:3.063763978e-07  time:1.76171359 s
+Iteration 284  E:2.702912331 MeV G:4285.589262 keV test:1.618296768e-07  time:1.716472341 s
+Iteration 285  E:2.702912335 MeV G:4285.589224 keV test:1.222178085e-06  time:1.702157785 s
+Iteration 286  E:2.702912328 MeV G:4285.589265 keV test:2.970160228e-07  time:1.748681605 s
+Iteration 287  E:2.702912323 MeV G:4285.589266 keV test:8.955773177e-08  time:1.770090802 s
+Iteration 288  E:1.974094378 MeV G:5820.716326 keV test:1.156456871  time:1.73489469 s
+Iteration 289  E:3.560065392 MeV G:7382.617716 keV test:0.1179690388  time:1.709269591 s
+Iteration 290  E:3.580179978 MeV G:8551.145874 keV test:0.3608764427  time:1.813773875 s
+Iteration 291  E:3.695213522 MeV G:7659.833917 keV test:0.04243976652  time:1.828688741 s
+Iteration 292  E:2.702912337 MeV G:4285.589267 keV test:2.365815698e-07  time:1.785305113 s
+Iteration 293  E:2.702912428 MeV G:4285.589373 keV test:6.090544653e-08  time:1.756591682 s
+Iteration 294  E:2.702912323 MeV G:4285.58925 keV test:3.462179096e-08  time:1.785024999 s
+Iteration 295  E:2.702912324 MeV G:4285.589263 keV test:1.02710071e-07  time:1.834113778 s
+Iteration 296  E:2.702912295 MeV G:4285.589257 keV test:6.949590611e-07  time:1.776351823 s
+Iteration 297  E:2.702912323 MeV G:4285.589268 keV test:5.525043047e-08  time:1.813792626 s
+Iteration 298  E:2.70291232 MeV G:4285.589265 keV test:4.124772888e-08  time:1.780677102 s
+Iteration 299  E:2.702912296 MeV G:4285.58927 keV test:2.132523246e-08  time:1.839328358 s
+
+Iteration 1  E:2.702912322 MeV G:4285.589263 keV test:5.195683738e-08  time:1.129891083 s
+Iteration 2  E:2.702912322 MeV G:4285.589263 keV test:4.568500034e-08  time:1.120709071 s
+Iteration 3  E:2.702912322 MeV G:4285.589263 keV test:2.958249268e-08  time:1.221615525 s
+Iteration 4  E:2.702912322 MeV G:4285.589263 keV test:2.589185482e-07  time:1.131012652 s
+Iteration 5  E:2.702912322 MeV G:4285.589263 keV test:2.167205331e-07  time:1.129736113 s
+Iteration 6  E:2.702912322 MeV G:4285.589263 keV test:9.890993284e-08  time:1.128366379 s
+Iteration 7  E:2.702912322 MeV G:4285.589263 keV test:7.141486993e-08  time:1.122249085 s
+Iteration 8  E:2.702912322 MeV G:4285.589263 keV test:7.050184359e-08  time:1.120156533 s
+Iteration 9  E:2.702912322 MeV G:4285.589263 keV test:3.064309903e-09  time:1.119884172 s
+Iteration 10  E:2.702912322 MeV G:4285.589263 keV test:1.842597212e-08  time:1.121119944 s
+Iteration 11  E:2.702912322 MeV G:4285.589263 keV test:8.23053164e-08  time:1.116332389 s
+Iteration 12  E:2.702912322 MeV G:4285.589263 keV test:2.956568432e-08  time:1.12591224 s
+Iteration 13  E:2.702912322 MeV G:4285.589263 keV test:2.276602334e-07  time:1.216870161 s
+Iteration 14  E:2.702912322 MeV G:4285.589263 keV test:7.506513862e-08  time:1.210282563 s
+Iteration 15  E:2.702912322 MeV G:4285.589263 keV test:8.211029114e-08  time:1.147906107 s
+Iteration 16  E:2.702912322 MeV G:4285.589263 keV test:5.425538548e-08  time:1.144898676 s
+Iteration 17  E:2.702912322 MeV G:4285.589263 keV test:4.893164278e-08  time:1.11479373 s
+Iteration 18  E:2.702912322 MeV G:4285.589263 keV test:1.165783874e-08  time:1.11506556 s
+Iteration 19  E:2.702912322 MeV G:4285.589263 keV test:7.326051247e-08  time:1.164654048 s
+Iteration 20  E:2.702912322 MeV G:4285.589263 keV test:4.965841188e-08  time:1.118435563 s
+Iteration 21  E:2.702912322 MeV G:4285.589263 keV test:3.235293516e-08  time:1.11855612 s
+Iteration 22  E:2.702912322 MeV G:4285.589263 keV test:4.450724776e-08  time:1.112855348 s
+Iteration 23  E:2.702912322 MeV G:4285.589263 keV test:7.915771052e-08  time:1.117639498 s
+Iteration 24  E:2.702912322 MeV G:4285.589263 keV test:5.960689071e-08  time:1.118190544 s
+Iteration 25  E:2.702912322 MeV G:4285.589263 keV test:4.114900992e-08  time:1.122337206 s
+Iteration 26  E:2.702912322 MeV G:4285.589263 keV test:1.446152579e-08  time:1.12222752 s
+Iteration 27  E:2.702912322 MeV G:4285.589263 keV test:4.595373274e-08  time:1.203297602 s
+Iteration 28  E:2.702912322 MeV G:4285.589263 keV test:1.220826076e-07  time:1.13214217 s
+Iteration 29  E:2.702912322 MeV G:4285.589263 keV test:1.372309793e-07  time:1.116340359 s
+Iteration 30  E:2.702912322 MeV G:4285.589263 keV test:1.320936373e-07  time:1.117302176 s
+Iteration 31  E:2.702912322 MeV G:4285.589263 keV test:1.27011396e-08  time:1.119550762 s
+Iteration 32  E:2.702912322 MeV G:4285.589263 keV test:1.346629474e-07  time:1.11718674 s
+Iteration 33  E:2.702912322 MeV G:4285.589263 keV test:2.665547862e-07  time:1.118184574 s
+Iteration 34  E:2.702912322 MeV G:4285.589263 keV test:5.447096353e-08  time:1.215397821 s
+Iteration 35  E:2.702912322 MeV G:4285.589263 keV test:2.687811713e-08  time:1.253512549 s
+Iteration 36  E:2.702912322 MeV G:4285.589263 keV test:5.783632008e-08  time:1.230944824 s
+Iteration 37  E:2.702912322 MeV G:4285.589263 keV test:1.635549189e-08  time:1.116906044 s
+Iteration 38  E:2.702912322 MeV G:4285.589263 keV test:3.215646533e-07  time:1.118516951 s
+Iteration 39  E:2.702912322 MeV G:4285.589263 keV test:9.261220342e-08  time:1.162105204 s
+Iteration 40  E:2.702912322 MeV G:4285.589263 keV test:1.03148384e-07  time:1.216409774 s
+Iteration 41  E:2.702912322 MeV G:4285.589263 keV test:2.853791003e-08  time:1.183098642 s
+Iteration 42  E:2.702912322 MeV G:4285.589263 keV test:4.758697545e-08  time:1.216016295 s
+Iteration 43  E:2.702912322 MeV G:4285.589263 keV test:3.168473402e-08  time:1.135775952 s
+Iteration 44  E:2.702912322 MeV G:4285.589263 keV test:2.038094313e-08  time:1.139597143 s
+Iteration 45  E:2.702912322 MeV G:4285.589263 keV test:2.848588925e-09  time:1.141268944 s
+Iteration 46  E:2.702912322 MeV G:4285.589263 keV test:3.290847305e-08  time:1.282409871 s
+Iteration 47  E:2.702912322 MeV G:4285.589263 keV test:8.253674069e-08  time:1.257066711 s
+Iteration 48  E:2.702912322 MeV G:4285.589263 keV test:6.76893733e-08  time:1.214079508 s
+Iteration 49  E:2.702912322 MeV G:4285.589263 keV test:2.044542417e-08  time:1.161299483 s
+Iteration 50  E:2.702912322 MeV G:4285.589263 keV test:2.591690375e-07  time:1.15470917 s
+Iteration 51  E:2.702912322 MeV G:4285.589263 keV test:2.062884542e-08  time:1.135986751 s
+Iteration 52  E:2.702912322 MeV G:4285.589263 keV test:1.984206149e-08  time:1.136045872 s
+Iteration 53  E:2.702912322 MeV G:4285.589263 keV test:5.673768454e-07  time:1.154372298 s
+Iteration 54  E:2.702912322 MeV G:4285.589263 keV test:1.480525895e-07  time:1.129326497 s
+Iteration 55  E:2.702912322 MeV G:4285.589263 keV test:2.821790988e-08  time:1.224334088 s
+Iteration 56  E:2.702912322 MeV G:4285.589263 keV test:7.589765726e-08  time:1.221210019 s
+Iteration 57  E:2.702912322 MeV G:4285.589263 keV test:5.484867121e-08  time:1.160585104 s
+Iteration 58  E:2.702912322 MeV G:4285.589263 keV test:4.539483121e-08  time:1.219057915 s
+Iteration 59  E:2.702912322 MeV G:4285.589263 keV test:1.555041874e-08  time:1.129850223 s
+Iteration 60  E:2.702912322 MeV G:4285.589263 keV test:1.610609514e-08  time:1.146851278 s
+Iteration 61  E:2.702912322 MeV G:4285.589263 keV test:3.035535794e-08  time:1.220118819 s
+Iteration 62  E:2.702912322 MeV G:4285.589263 keV test:4.799150104e-08  time:1.213664673 s
+Iteration 63  E:2.702912322 MeV G:4285.589263 keV test:4.015648082e-08  time:1.13825141 s
+Iteration 64  E:2.702912322 MeV G:4285.589263 keV test:2.253506883e-07  time:1.154336384 s
+Iteration 65  E:2.702912322 MeV G:4285.589263 keV test:4.061471689e-08  time:1.185782883 s
+Iteration 66  E:2.702912322 MeV G:4285.589263 keV test:3.740805978e-08  time:1.127168034 s
+Iteration 67  E:2.702912322 MeV G:4285.589263 keV test:5.701759922e-08  time:1.127290294 s
+Iteration 68  E:2.702912322 MeV G:4285.589263 keV test:1.7254047e-07  time:1.130386232 s
+Iteration 69  E:2.702912322 MeV G:4285.589263 keV test:1.533309364e-08  time:1.126730614 s
+Iteration 70  E:2.702912322 MeV G:4285.589263 keV test:3.048961465e-08  time:1.242600837 s
+Iteration 71  E:2.702912322 MeV G:4285.589263 keV test:3.747971146e-08  time:1.146753718 s
+Iteration 72  E:2.702912322 MeV G:4285.589263 keV test:6.850922113e-08  time:1.140774603 s
+Iteration 73  E:2.702912321 MeV G:4285.589266 keV test:2.955990691e-08  time:1.136773044 s
+Iteration 74  E:2.702912322 MeV G:4285.589263 keV test:1.242910155e-07  time:1.155473123 s
+Iteration 75  E:2.702912322 MeV G:4285.589263 keV test:1.003454141e-07  time:1.245500497 s
+Iteration 76  E:2.702912322 MeV G:4285.589263 keV test:2.604624078e-08  time:1.251415611 s
+Iteration 77  E:2.702912322 MeV G:4285.589263 keV test:2.005208024e-08  time:1.144267698 s
+Iteration 78  E:2.702912322 MeV G:4285.589263 keV test:5.92478511e-09  time:1.137686442 s
+Iteration 79  E:2.702912322 MeV G:4285.589263 keV test:2.74190502e-08  time:1.256506318 s
+Iteration 80  E:2.702912322 MeV G:4285.589263 keV test:1.070854018e-07  time:1.148103377 s
+Iteration 81  E:2.702912321 MeV G:4285.589264 keV test:5.036744356e-08  time:1.311877242 s
+Iteration 82  E:2.702912322 MeV G:4285.589263 keV test:8.798917047e-09  time:1.185091138 s
+Iteration 83  E:2.702912322 MeV G:4285.589263 keV test:7.306573906e-08  time:1.136028628 s
+Iteration 84  E:2.702912322 MeV G:4285.589263 keV test:1.894778195e-08  time:1.253535267 s
+Iteration 85  E:2.702912322 MeV G:4285.589264 keV test:1.29085665e-07  time:1.1446023 s
+Iteration 86  E:2.702912322 MeV G:4285.589263 keV test:2.396995888e-08  time:1.144712286 s
+Iteration 87  E:2.702912322 MeV G:4285.589263 keV test:4.814112254e-09  time:1.239997901 s
+Iteration 88  E:2.702912322 MeV G:4285.589263 keV test:9.476048379e-09  time:1.220660566 s
+Iteration 89  E:2.702912322 MeV G:4285.589263 keV test:1.08996055e-08  time:1.227395491 s
+Iteration 90  E:2.702912322 MeV G:4285.589263 keV test:3.511510046e-08  time:1.150724955 s
+Iteration 91  E:2.702912322 MeV G:4285.589263 keV test:2.933201757e-08  time:1.157450393 s
+Iteration 92  E:2.702912322 MeV G:4285.589263 keV test:3.155466507e-08  time:1.15734227 s
+Iteration 93  E:2.702912322 MeV G:4285.589263 keV test:2.744491283e-08  time:1.227552197 s
+Iteration 94  E:2.702912322 MeV G:4285.589263 keV test:2.137456617e-08  time:1.223790159 s
+Iteration 95  E:2.702912322 MeV G:4285.589263 keV test:5.924038758e-09  time:1.193871611 s
+Iteration 96  E:2.702912322 MeV G:4285.589263 keV test:9.34504253e-09  time:1.209601138 s
+Iteration 97  E:2.702912322 MeV G:4285.589263 keV test:9.443842702e-09  time:1.151750345 s
+Iteration 98  E:2.702912322 MeV G:4285.589263 keV test:3.603921936e-09  time:1.180516046 s
+Iteration 99  E:2.702912322 MeV G:4285.589263 keV test:6.372800597e-08  time:1.275686955 s
+Iteration 100  E:2.702912322 MeV G:4285.589263 keV test:5.846709256e-09  time:1.176553591 s
+Iteration 101  E:2.702912322 MeV G:4285.589263 keV test:4.0247523e-08  time:1.168194565 s
+Iteration 102  E:2.702912322 MeV G:4285.589263 keV test:1.612460796e-08  time:1.193230529 s
+Iteration 103  E:2.702912322 MeV G:4285.589263 keV test:2.427378813e-08  time:1.273968728 s
+Iteration 104  E:2.702912322 MeV G:4285.589263 keV test:1.009322749e-08  time:1.163157371 s
+Iteration 105  E:2.702912322 MeV G:4285.589264 keV test:6.444647717e-09  time:1.253851167 s
+Iteration 106  E:2.702912322 MeV G:4285.589263 keV test:2.665869156e-09  time:1.233042427 s
+Iteration 107  E:2.702912322 MeV G:4285.589264 keV test:3.087961207e-08  time:1.250109347 s
+Iteration 108  E:2.702912322 MeV G:4285.589263 keV test:8.447637735e-09  time:1.251133962 s
+Iteration 109  E:2.702912322 MeV G:4285.589264 keV test:1.499236741e-08  time:1.175352767 s
+Iteration 110  E:2.702912322 MeV G:4285.589264 keV test:2.863636413e-08  time:1.235694231 s
+Iteration 111  E:2.702912322 MeV G:4285.589263 keV test:5.822138811e-08  time:1.250854729 s
+Iteration 112  E:2.702912322 MeV G:4285.589263 keV test:9.794057195e-09  time:1.169919088 s
+Iteration 113  E:2.702912322 MeV G:4285.589263 keV test:4.396471096e-08  time:1.239720688 s
+Iteration 114  E:2.702912322 MeV G:4285.589263 keV test:1.088174614e-08  time:1.175648766 s
+Iteration 115  E:2.702912322 MeV G:4285.589263 keV test:1.013168172e-08  time:1.173559319 s
+Iteration 116  E:2.702912322 MeV G:4285.589263 keV test:3.339212334e-09  time:1.165621113 s
+Iteration 117  E:2.702912322 MeV G:4285.589263 keV test:7.680210653e-10  time:1.260365943 s
+Iteration 118  E:2.702912322 MeV G:4285.589263 keV test:2.533901827e-09  time:1.28835182 s
+Iteration 119  E:2.702912322 MeV G:4285.589263 keV test:3.594234487e-09  time:1.296579911 s
+Iteration 120  E:2.702912322 MeV G:4285.589263 keV test:9.616825391e-10  time:1.278470232 s
+Iteration 121  E:2.702912322 MeV G:4285.589263 keV test:1.913950944e-09  time:1.286746995 s
+Iteration 122  E:2.702912322 MeV G:4285.589263 keV test:1.273014967e-09  time:1.204296478 s
+Iteration 123  E:2.702912322 MeV G:4285.589263 keV test:2.396285497e-09  time:1.194880405 s
+Iteration 124  E:2.702912322 MeV G:4285.589264 keV test:6.308739474e-09  time:1.302821962 s
+Iteration 125  E:2.702912322 MeV G:4285.589263 keV test:3.609872454e-09  time:1.30081455 s
+Iteration 126  E:2.702912322 MeV G:4285.589263 keV test:3.884132542e-08  time:1.200013571 s
+Iteration 127  E:2.702912321 MeV G:4285.589264 keV test:4.15142326e-09  time:1.196293751 s
+Iteration 128  E:2.702912322 MeV G:4285.589263 keV test:5.539218284e-09  time:1.217998356 s
+Iteration 129  E:2.702912322 MeV G:4285.589263 keV test:3.969235443e-09  time:1.173778185 s
+Iteration 130  E:2.702912322 MeV G:4285.589263 keV test:6.989828307e-09  time:1.170389157 s
+Iteration 131  E:2.702912322 MeV G:4285.589263 keV test:2.052503908e-09  time:1.262159167 s
+Iteration 132  E:2.702912321 MeV G:4285.589263 keV test:1.058646107e-09  time:1.192337931 s
+Iteration 133  E:2.702912322 MeV G:4285.589263 keV test:4.536838381e-09  time:1.262420068 s
+Iteration 134  E:2.702912322 MeV G:4285.589263 keV test:1.152312895e-09  time:1.179391915 s
+Iteration 135  E:2.702912322 MeV G:4285.589263 keV test:3.16353013e-09  time:1.275749234 s
+Iteration 136  E:2.702912322 MeV G:4285.589264 keV test:2.102155432e-09  time:1.307642674 s
+Iteration 137  E:2.702912322 MeV G:4285.589264 keV test:1.681769563e-09  time:1.315674456 s
+Iteration 138  E:2.702912322 MeV G:4285.589263 keV test:1.405924083e-09  time:1.178565833 s
+Iteration 139  E:2.702912322 MeV G:4285.589263 keV test:2.274366941e-09  time:1.18601978 s
+Iteration 140  E:2.702912322 MeV G:4285.589264 keV test:1.177633274e-09  time:1.209273566 s
+Iteration 141  E:2.702912322 MeV G:4285.589263 keV test:1.586085726e-09  time:1.184484386 s
+Iteration 142  E:2.702912322 MeV G:4285.589263 keV test:2.523675633e-10  time:1.188844409 s
+Iteration 143  E:2.702912322 MeV G:4285.589264 keV test:1.142577703e-08  time:1.31913476 s
+Iteration 144  E:2.702912322 MeV G:4285.589263 keV test:3.610450309e-09  time:1.202529394 s
+Iteration 145  E:2.702912323 MeV G:4285.589265 keV test:7.849830122e-10  time:1.232804874 s
+Iteration 146  E:2.702912322 MeV G:4285.589263 keV test:4.864281781e-09  time:1.297561905 s
+Iteration 147  E:2.702912322 MeV G:4285.589263 keV test:7.066158615e-10  time:1.384093662 s
+Iteration 148  E:2.702912322 MeV G:4285.589263 keV test:6.030828866e-10  time:1.366213836 s
+Iteration 149  E:2.702912322 MeV G:4285.589263 keV test:2.49354523e-10  time:1.183003425 s
+Iteration 150  E:2.702912322 MeV G:4285.589263 keV test:4.069824853e-10  time:1.349200548 s
+Iteration 151  E:2.702912322 MeV G:4285.589263 keV test:3.018924868e-09  time:1.213847855 s
+Iteration 152  E:2.702912322 MeV G:4285.589264 keV test:1.786003504e-09  time:1.282701814 s
+Iteration 153  E:2.702912322 MeV G:4285.589264 keV test:9.548333157e-10  time:1.319800465 s
+Iteration 154  E:2.702912322 MeV G:4285.589263 keV test:2.122422481e-10  time:1.204191581 s
+Iteration 155  E:2.702912322 MeV G:4285.589263 keV test:4.413517331e-11  time:1.306069615 s
+
+
+Expectation values
+------------------
+
+|J^2.PSI - J(J+1).PSI|oo = 6.60405966024236e-11
+
+|H.PSI - E.PSI|oo = 1.77999927991612e-09
+
+<T> = (0.0654908833913526,0.0413431463694867)
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion)
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut)
+
+E:(2.70291232171462,-2.14279463171457)  J Pi:1+
+
+
+
+
+Number of non zeros H NBMEs calculated and stored. time:0.00303020398132503 s
+
+
+H memory min used by a process        : 2.83422799999998 Mb
+H memory max used by a process        : 4.89732799999995 Mb
+H memory average for all processes    : 3.52928266666664 Mb
+H memory dispersion for all processes : 1.15812275859396 Mb
+
+
+Off diagonal non zero NBMEs equivalent memory min used by a process        : 17.892896 Mb
+Off diagonal non zero NBMEs equivalent memory max used by a process        : 35.819648 Mb
+Off diagonal non zero NBMEs equivalent memory average for all processes    : 23.86848 Mb
+Off diagonal non zero NBMEs equivalent memory dispersion for all processes : 10.3500150928957 Mb
+
+H non zero NBMEs number:2239786
+H non zero NBMEs proportion:50.023629489603%
+
+Maximal initial memory of all GSM vectors for a process before the Lanczos/Davidson method:0.119672 Mb
+Allowed maximal memory of all GSM vectors for a process during the Lanczos/Davidson method:5.217272 Mb
+
+
+3+(0) Z:3 , N:3
+--------------------
+
+Iteration 1  E:-1.191959654 MeV G:-13.6592771 keV test:0.2590517495  time:0.04396998091 s
+Iteration 2  E:-1.238253561 MeV G:-2.380736598 keV test:0.05038662571  time:0.04386844102 s
+Iteration 3  E:-1.243735212 MeV G:0.03753785718 keV test:0.01546344035  time:0.04468073696 s
+Iteration 4  E:-1.24380155 MeV G:0.1524288597 keV test:0.003553257049  time:0.04543917195 s
+Iteration 5  E:-1.243803951 MeV G:0.144548172 keV test:0.0008657815311  time:0.044643417 s
+Iteration 6  E:-1.243892174 MeV G:0.007097487936 keV test:0.001830008208  time:0.05217618099 s
+Iteration 7  E:-1.243888821 MeV G:0.0008100021729 keV test:0.0004377146304  time:0.04669108498 s
+Iteration 8  E:-1.243888604 MeV G:0.0001239797351 keV test:0.000123586019  time:0.04735544394 s
+Iteration 9  E:-1.243888585 MeV G:2.740717247e-05 keV test:5.572700512e-05  time:0.04570605396 s
+Iteration 10  E:-1.243888583 MeV G:1.268152807e-05 keV test:1.869856182e-05  time:0.04870885599 s
+Iteration 11  E:-1.243888582 MeV G:1.000301398e-05 keV test:8.335313867e-06  time:0.04862259503 s
+Iteration 12  E:-1.243888582 MeV G:9.547235475e-06 keV test:3.274218815e-06  time:0.04581989802 s
+Iteration 13  E:-1.243888582 MeV G:9.526243653e-06 keV test:9.223380596e-07  time:0.046816802 s
+Iteration 14  E:-1.243888582 MeV G:9.537903684e-06 keV test:2.935521654e-06  time:0.04855814308 s
+Iteration 15  E:-1.243888582 MeV G:9.539918448e-06 keV test:6.629233527e-07  time:0.048692154 s
+Iteration 16  E:-1.243888582 MeV G:9.54607124e-06 keV test:2.856313857e-07  time:0.04633917403 s
+Iteration 17  E:-1.243888582 MeV G:9.546798949e-06 keV test:2.716846941e-07  time:0.04865007603 s
+Iteration 18  E:-1.243888582 MeV G:9.546993504e-06 keV test:9.104744376e-08  time:0.047305029 s
+Iteration 19  E:-1.243888582 MeV G:9.546647421e-06 keV test:4.91077552e-08  time:0.04633943399 s
+Iteration 20  E:-1.243888582 MeV G:9.54684104e-06 keV test:2.723245211e-08  time:0.04735762696 s
+Iteration 21  E:-1.243888582 MeV G:9.546765384e-06 keV test:1.084376301e-08  time:0.04899397201 s
+Iteration 22  E:-1.243888582 MeV G:9.546521288e-06 keV test:4.504427116e-09  time:0.04732596804 s
+Iteration 23  E:-1.243888582 MeV G:9.546568479e-06 keV test:2.389290718e-09  time:0.04900303902 s
+Iteration 24  E:-1.243888582 MeV G:9.546726328e-06 keV test:1.863139451e-09  time:0.04818369902 s
+Iteration 25  E:-1.243888582 MeV G:9.546650943e-06 keV test:7.490378553e-11  time:0.048193558 s
+
+
+Expectation values
+------------------
+
+|J^2.PSI - J(J+1).PSI|oo = 0
+
+|H.PSI - E.PSI|oo = 2.40672450173488e-09
+
+<T> = (-0.0245674027606326,0.00243664393527771)
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion)
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut)
+
+E:(-1.24388858198183,-4.77332547138931e-09)  J Pi:3+
+
+
+
+
+Number of non zeros H NBMEs calculated and stored. time:0.148047768976539 s
+
+
+H memory min used by a process        : 233.652968000002 Mb
+H memory max used by a process        : 454.584431999938 Mb
+H memory average for all processes    : 308.031557333314 Mb
+H memory dispersion for all processes : 126.761258603753 Mb
+
+
+Off diagonal non zero NBMEs equivalent memory min used by a process        : 1790.81312 Mb
+Off diagonal non zero NBMEs equivalent memory max used by a process        : 3581.9648 Mb
+Off diagonal non zero NBMEs equivalent memory average for all processes    : 2387.86368 Mb
+Off diagonal non zero NBMEs equivalent memory dispersion for all processes : 1034.12190460745 Mb
+
+H non zero NBMEs number:223883380
+H non zero NBMEs proportion:50.0023629489603%
+
+Maximal initial memory of all GSM vectors for a process before the Lanczos/Davidson method:1.186136 Mb
+Allowed maximal memory of all GSM vectors for a process during the Lanczos/Davidson method:51.989336 Mb
+
+
+0+(0) Z:3 , N:3
+--------------------
+
+Iteration 1  E:-0.8345948853 MeV G:-97.77446259 keV test:0.2835953541  time:1.11659237 s
+Iteration 2  E:-1.188259279 MeV G:-31.8575208 keV test:0.1536310292  time:1.193821688 s
+Iteration 3  E:-1.228099536 MeV G:-3.922782206 keV test:0.02965812875  time:1.121032723 s
+Iteration 4  E:-1.234354981 MeV G:-0.506785168 keV test:0.02372211957  time:1.122440859 s
+Iteration 5  E:-1.235237897 MeV G:-0.00506880192 keV test:0.005458480277  time:1.127057325 s
+Iteration 6  E:-1.235407795 MeV G:0.09986707439 keV test:0.004319426987  time:1.112328539 s
+Iteration 7  E:-1.235529851 MeV G:-0.01332011477 keV test:0.004202771072  time:1.112392599 s
+Iteration 8  E:-1.235512156 MeV G:0.01902658233 keV test:0.001492004674  time:1.12011462 s
+Iteration 9  E:-1.235509199 MeV G:0.01331049029 keV test:0.0004529013502  time:1.114400994 s
+Iteration 10  E:-1.23550932 MeV G:0.01173067064 keV test:0.0001890780302  time:1.115358002 s
+Iteration 11  E:-1.235509334 MeV G:0.01123293375 keV test:0.0001516231037  time:1.117523091 s
+Iteration 12  E:-1.235509349 MeV G:0.0112395407 keV test:2.744559172e-05  time:1.120766055 s
+Iteration 13  E:-1.235509348 MeV G:0.01122228263 keV test:3.513801712e-05  time:1.120995386 s
+Iteration 14  E:-1.235509351 MeV G:0.01122539352 keV test:1.229422916e-05  time:1.121222833 s
+Iteration 15  E:-1.235509351 MeV G:0.01122506805 keV test:2.949522186e-06  time:1.115587275 s
+Iteration 16  E:-1.235509351 MeV G:0.01122506117 keV test:8.532421846e-07  time:1.120303516 s
+Iteration 17  E:-1.235509351 MeV G:0.01122498029 keV test:5.298910134e-06  time:1.121828873 s
+Iteration 18  E:-1.235509351 MeV G:0.01122501043 keV test:3.987434758e-07  time:1.118211246 s
+Iteration 19  E:-1.235509351 MeV G:0.01122501188 keV test:3.460388174e-07  time:1.110914946 s
+Iteration 20  E:-1.235509351 MeV G:0.01122501188 keV test:2.219426656e-07  time:1.11860203 s
+Iteration 21  E:-1.235509351 MeV G:0.01122501339 keV test:6.842748277e-08  time:1.190971867 s
+Iteration 22  E:-1.235509351 MeV G:0.01122501129 keV test:1.173456927e-07  time:1.241019089 s
+Iteration 23  E:-1.235509351 MeV G:0.01122501368 keV test:3.643824757e-08  time:1.170701078 s
+Iteration 24  E:-1.235509351 MeV G:0.01122501236 keV test:1.477270194e-08  time:1.13212931 s
+Iteration 25  E:-1.235509351 MeV G:0.01122501711 keV test:8.756065741e-09  time:1.146984734 s
+Iteration 26  E:-1.235509351 MeV G:0.01122501347 keV test:2.203622364e-09  time:1.196133718 s
+Iteration 27  E:-1.235509351 MeV G:0.01122502529 keV test:8.422945091e-11  time:1.186824105 s
+
+
+Expectation values
+------------------
+
+|J^2.PSI - J(J+1).PSI|oo = 4.03822164140548e-15
+
+|H.PSI - E.PSI|oo = 7.95699245381698e-09
+
+<T> = (1.00955295137315,-0.00107105317469083)
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion)
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut)
+
+E:(-1.23550935115623,-5.61251264397138e-06)  J Pi:0+
+
+
+
+
+Number of non zeros H NBMEs calculated and stored. time:0.0246929689310491 s
+
+
+H memory min used by a process        : 39.4536319999998 Mb
+H memory max used by a process        : 73.8833440000025 Mb
+H memory average for all processes    : 50.9544853333344 Mb
+H memory dispersion for all processes : 19.78450475349 Mb
+
+
+Off diagonal non zero NBMEs equivalent memory min used by a process        : 286.489472 Mb
+Off diagonal non zero NBMEs equivalent memory max used by a process        : 573.114368 Mb
+Off diagonal non zero NBMEs equivalent memory average for all processes    : 382.031104 Mb
+Off diagonal non zero NBMEs equivalent memory dispersion for all processes : 165.482960862048 Mb
+
+H non zero NBMEs number:35823880
+H non zero NBMEs proportion:50.0059073724008%
+
+Maximal initial memory of all GSM vectors for a process before the Lanczos/Davidson method:0.47516 Mb
+Allowed maximal memory of all GSM vectors for a process during the Lanczos/Davidson method:20.80796 Mb
+
+
+2+(0) Z:3 , N:3
+--------------------
+
+Iteration 1  E:1.828390541 MeV G:-28.15468934 keV test:0.4534819967  time:0.421047942 s
+Iteration 2  E:1.341239478 MeV G:249.0931855 keV test:0.1889976982  time:0.4178435201 s
+Iteration 3  E:1.329904354 MeV G:258.5373444 keV test:0.03121274371  time:0.421136508 s
+Iteration 4  E:1.268917442 MeV G:206.3601467 keV test:0.0808221241  time:0.445599174 s
+Iteration 5  E:1.251604622 MeV G:188.0800997 keV test:0.02990720095  time:0.4285861071 s
+Iteration 6  E:1.238792091 MeV G:201.6353178 keV test:0.05422277371  time:0.431785719 s
+Iteration 7  E:1.241112549 MeV G:198.9239725 keV test:0.019082092  time:0.431340242 s
+Iteration 8  E:1.237272853 MeV G:198.6289867 keV test:0.027604992  time:0.447117829 s
+Iteration 9  E:1.235415443 MeV G:189.4461392 keV test:0.01981888174  time:0.4233665391 s
+Iteration 10  E:1.228408034 MeV G:186.6881411 keV test:0.01920708083  time:0.4186790501 s
+Iteration 11  E:1.228484054 MeV G:186.5128643 keV test:0.00490826975  time:0.496779747 s
+Iteration 12  E:1.228881111 MeV G:185.0730567 keV test:0.008740712486  time:0.484363956 s
+Iteration 13  E:1.228153404 MeV G:183.5694419 keV test:0.0263956524  time:0.486570883 s
+Iteration 14  E:1.228262725 MeV G:182.7740147 keV test:0.00977091623  time:0.420841173 s
+Iteration 15  E:1.228215685 MeV G:181.6046164 keV test:0.008664197641  time:0.432000633 s
+Iteration 16  E:1.228309013 MeV G:180.7277797 keV test:0.01057462796  time:0.428439451 s
+Iteration 17  E:1.752906852 MeV G:1276.320813 keV test:0.2917136064  time:0.4327066489 s
+Iteration 18  E:1.228520505 MeV G:182.3512175 keV test:0.008497671315  time:0.4241426081 s
+Iteration 19  E:1.227862988 MeV G:180.1606472 keV test:0.01376585459  time:0.43407976 s
+Iteration 20  E:1.227475205 MeV G:184.2693695 keV test:0.01104196391  time:0.430847967 s
+Iteration 21  E:1.227459149 MeV G:184.3676579 keV test:0.001620093759  time:0.435373771 s
+Iteration 22  E:1.859633215 MeV G:1687.839701 keV test:0.5173369922  time:0.421883733 s
+Iteration 23  E:1.226251431 MeV G:186.6281061 keV test:0.005260745335  time:0.42716145 s
+Iteration 24  E:1.225615203 MeV G:186.3205143 keV test:0.01802969057  time:0.4221096771 s
+Iteration 25  E:1.227100957 MeV G:187.6934688 keV test:0.02133407049  time:0.4377753939 s
+Iteration 26  E:1.224685781 MeV G:191.8411902 keV test:0.01687210025  time:0.4288440821 s
+Iteration 27  E:1.22220461 MeV G:192.3711985 keV test:0.01761694261  time:0.4391987891 s
+Iteration 28  E:1.223276031 MeV G:192.6621191 keV test:0.01516165725  time:0.423382559 s
+Iteration 29  E:1.224095024 MeV G:190.1488744 keV test:0.01390432859  time:0.444336153 s
+Iteration 30  E:1.223810169 MeV G:190.9355747 keV test:0.003497871304  time:0.418057614 s
+Iteration 31  E:1.223696255 MeV G:191.2108179 keV test:0.005106647985  time:0.421914722 s
+Iteration 32  E:1.224060069 MeV G:190.6578252 keV test:0.03245143287  time:0.440951864 s
+Iteration 33  E:1.224034106 MeV G:190.8052064 keV test:0.002797257093  time:0.425945255 s
+Iteration 34  E:1.224129548 MeV G:191.212512 keV test:0.00763575898  time:0.428274052 s
+Iteration 35  E:1.224185225 MeV G:190.8231102 keV test:0.002743527282  time:0.423305285 s
+Iteration 36  E:1.224178672 MeV G:191.2014674 keV test:0.01054165447  time:0.416814017 s
+Iteration 37  E:1.224021614 MeV G:190.7425047 keV test:0.004752338101  time:0.425323186 s
+Iteration 38  E:1.224014379 MeV G:190.4836041 keV test:0.007413482469  time:0.419111655 s
+Iteration 39  E:1.224025747 MeV G:191.0289927 keV test:0.006278314496  time:0.4179265179 s
+Iteration 40  E:1.224020491 MeV G:190.836791 keV test:0.002177172197  time:0.421245724 s
+Iteration 41  E:1.224023018 MeV G:190.8336623 keV test:0.0003866354738  time:0.4187729091 s
+Iteration 42  E:1.224031536 MeV G:190.7893785 keV test:0.002603036086  time:0.4716737421 s
+Iteration 43  E:1.224031699 MeV G:190.7881842 keV test:0.0003118565983  time:0.488755259 s
+Iteration 44  E:1.22403831 MeV G:190.7327826 keV test:0.004896257256  time:0.4287198599 s
+Iteration 45  E:1.224044219 MeV G:190.6780688 keV test:0.002442003859  time:0.4296682109 s
+Iteration 46  E:1.224020112 MeV G:190.6603702 keV test:0.002929351413  time:0.4381517421 s
+Iteration 47  E:1.224025439 MeV G:190.6638831 keV test:0.0003766027916  time:0.4238817779 s
+Iteration 48  E:1.224025201 MeV G:190.6647021 keV test:0.0001271434461  time:0.427482935 s
+Iteration 49  E:1.224025389 MeV G:190.6553 keV test:0.001870959962  time:0.422354108 s
+Iteration 50  E:1.224028232 MeV G:190.6601262 keV test:0.001345410217  time:0.420148533 s
+Iteration 51  E:1.224030471 MeV G:190.6712297 keV test:0.00123871053  time:0.42404751 s
+Iteration 52  E:1.224033474 MeV G:190.6807247 keV test:0.0007845141526  time:0.42233404 s
+Iteration 53  E:1.224027427 MeV G:190.6814705 keV test:0.0005111310845  time:0.426756831 s
+Iteration 54  E:1.224027249 MeV G:190.6826911 keV test:0.0001740422828  time:0.427662753 s
+Iteration 55  E:1.224029503 MeV G:190.6788891 keV test:0.001090373666  time:0.4274105789 s
+Iteration 56  E:1.224029073 MeV G:190.67692 keV test:0.0002775489594  time:0.4247797959 s
+Iteration 57  E:1.224028774 MeV G:190.6753342 keV test:0.0003848012517  time:0.422053252 s
+Iteration 58  E:1.224028791 MeV G:190.6753445 keV test:3.635616464e-05  time:0.4293405961 s
+Iteration 59  E:1.224028766 MeV G:190.6755593 keV test:9.534810881e-05  time:0.434580933 s
+Iteration 60  E:1.224029007 MeV G:190.6755178 keV test:0.0007529972403  time:0.4215610679 s
+Iteration 61  E:1.224028806 MeV G:190.6755741 keV test:4.792368296e-05  time:0.4264086171 s
+Iteration 62  E:1.224028803 MeV G:190.6755761 keV test:4.240241316e-05  time:0.426561855 s
+Iteration 63  E:1.224028804 MeV G:190.6755638 keV test:2.389579671e-05  time:0.492389139 s
+Iteration 64  E:1.224028806 MeV G:190.6755624 keV test:5.271726886e-06  time:0.487973601 s
+Iteration 65  E:1.224028806 MeV G:190.6755594 keV test:3.472396137e-05  time:0.4409902371 s
+Iteration 66  E:1.224028808 MeV G:190.6755585 keV test:1.209886449e-05  time:0.4295592679 s
+Iteration 67  E:1.224028811 MeV G:190.6755657 keV test:3.19776283e-05  time:0.433389454 s
+Iteration 68  E:1.224028815 MeV G:190.6755701 keV test:3.757543445e-05  time:0.427779794 s
+Iteration 69  E:1.224028818 MeV G:190.6755654 keV test:2.198770749e-05  time:0.428089506 s
+Iteration 70  E:1.224028818 MeV G:190.6755632 keV test:8.274796481e-06  time:0.4279949381 s
+Iteration 71  E:1.224028818 MeV G:190.6755634 keV test:3.386009688e-06  time:0.432414302 s
+Iteration 72  E:1.224028818 MeV G:190.6755633 keV test:2.997349734e-06  time:0.429100676 s
+Iteration 73  E:1.224028818 MeV G:190.6755636 keV test:3.606386527e-06  time:0.42704838 s
+Iteration 74  E:1.224028818 MeV G:190.6755636 keV test:2.394218362e-06  time:0.433726267 s
+Iteration 75  E:1.224028818 MeV G:190.6755636 keV test:2.105925218e-06  time:0.4263877991 s
+Iteration 76  E:1.224028818 MeV G:190.6755636 keV test:1.219795639e-06  time:0.432921115 s
+Iteration 77  E:1.224028818 MeV G:190.675563 keV test:4.908393826e-06  time:0.434817789 s
+Iteration 78  E:1.224028818 MeV G:190.6755632 keV test:2.595272725e-06  time:0.4341358281 s
+Iteration 79  E:1.224028818 MeV G:190.6755633 keV test:1.840585061e-06  time:0.4296049629 s
+Iteration 80  E:1.224028818 MeV G:190.6755633 keV test:2.122254697e-06  time:0.429716764 s
+Iteration 81  E:1.224028818 MeV G:190.6755633 keV test:1.207574526e-06  time:0.430176949 s
+Iteration 82  E:1.224028818 MeV G:190.6755633 keV test:5.10962741e-07  time:0.431848078 s
+Iteration 83  E:1.224028818 MeV G:190.6755633 keV test:4.904667807e-07  time:0.435604156 s
+Iteration 84  E:1.224028818 MeV G:190.6755633 keV test:4.153059527e-07  time:0.431599812 s
+Iteration 85  E:1.224028818 MeV G:190.6755633 keV test:6.337257012e-07  time:0.434900685 s
+Iteration 86  E:1.224028818 MeV G:190.6755634 keV test:9.373006824e-08  time:0.434463924 s
+Iteration 87  E:1.224028818 MeV G:190.6755632 keV test:3.348067074e-07  time:0.43376413 s
+Iteration 88  E:1.224028818 MeV G:190.6755633 keV test:1.724957711e-07  time:0.431671737 s
+Iteration 89  E:1.224028818 MeV G:190.6755633 keV test:1.182464064e-07  time:0.4341410081 s
+Iteration 90  E:1.224028818 MeV G:190.6755634 keV test:2.32165501e-07  time:0.4363176869 s
+Iteration 91  E:1.224028818 MeV G:190.6755633 keV test:5.978097455e-08  time:0.4355673981 s
+Iteration 92  E:1.224028818 MeV G:190.6755633 keV test:5.844105875e-08  time:0.433308463 s
+Iteration 93  E:1.224028818 MeV G:190.6755633 keV test:2.457837554e-08  time:0.435788504 s
+Iteration 94  E:1.224028818 MeV G:190.6755633 keV test:7.967084167e-08  time:0.4397145 s
+Iteration 95  E:1.224028818 MeV G:190.6755633 keV test:8.155163679e-08  time:0.4384274819 s
+Iteration 96  E:1.224028818 MeV G:190.6755634 keV test:4.409592412e-08  time:0.437579589 s
+Iteration 97  E:1.224028818 MeV G:190.6755633 keV test:1.422618418e-08  time:0.4421278159 s
+Iteration 98  E:1.224028818 MeV G:190.6755633 keV test:1.342646612e-08  time:0.441606136 s
+Iteration 99  E:1.224028818 MeV G:190.6755633 keV test:7.658000013e-09  time:0.4462729549 s
+Iteration 100  E:1.224028818 MeV G:190.6755633 keV test:2.200125117e-08  time:0.4415339599 s
+Iteration 101  E:1.224028818 MeV G:190.6755633 keV test:2.350943365e-09  time:0.437554001 s
+Iteration 102  E:1.224028818 MeV G:190.6755633 keV test:2.522174056e-09  time:0.4445071169 s
+Iteration 103  E:1.224028818 MeV G:190.6755633 keV test:2.365279521e-09  time:0.4410422969 s
+Iteration 104  E:1.224028818 MeV G:190.6755633 keV test:2.858725693e-09  time:0.445596343 s
+Iteration 105  E:1.224028818 MeV G:190.6755633 keV test:9.438048326e-10  time:0.443613578 s
+Iteration 106  E:1.224028818 MeV G:190.6755633 keV test:6.658716348e-10  time:0.447717119 s
+Iteration 107  E:1.224028818 MeV G:190.6755632 keV test:2.973157779e-10  time:0.445824513 s
+Iteration 108  E:1.224028818 MeV G:190.6755633 keV test:3.017535889e-10  time:0.449307468 s
+Iteration 109  E:1.224028818 MeV G:190.6755633 keV test:1.614849355e-10  time:0.445705509 s
+Iteration 110  E:1.224028818 MeV G:190.6755633 keV test:1.642384628e-09  time:0.447656775 s
+Iteration 111  E:1.224028818 MeV G:190.6755633 keV test:2.960134615e-10  time:0.4481172509 s
+Iteration 112  E:1.224028818 MeV G:190.6755633 keV test:2.423876531e-10  time:0.453845575 s
+Iteration 113  E:1.224028818 MeV G:190.6755633 keV test:1.728151852e-10  time:0.448420821 s
+Iteration 114  E:1.224028818 MeV G:190.6755633 keV test:8.928584205e-11  time:0.464776695 s
+
+
+Expectation values
+------------------
+
+|J^2.PSI - J(J+1).PSI|oo = 2.27390337664856e-14
+
+|H.PSI - E.PSI|oo = 4.39810165001574e-09
+
+<T> = (0.94308103183872,0.0327053388679355)
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion)
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut)
+
+E:(1.22402881823833,-0.0953377816601379)  J Pi:2+
+
+
+
+
+2+(1) Z:3 , N:3
+--------------------
+
+Iteration 1  E:2.32371753 MeV G:60.94132351 keV test:0.4214103751  time:0.417446048 s
+Iteration 2  E:1.870939165 MeV G:439.7135121 keV test:0.2059659934  time:0.416349077 s
+Iteration 3  E:1.607726292 MeV G:486.8914749 keV test:0.2133808588  time:0.4151871131 s
+Iteration 4  E:3.361428845 MeV G:102.6452108 keV test:0.4482546847  time:0.420226553 s
+Iteration 5  E:2.617530176 MeV G:-145.6599029 keV test:0.2795246964  time:0.4194487111 s
+Iteration 6  E:1.736478408 MeV G:954.2580451 keV test:0.460953469  time:0.4154458301 s
+Iteration 7  E:2.0005856 MeV G:289.6344301 keV test:0.2826153632  time:0.414451742 s
+Iteration 8  E:1.996961808 MeV G:178.8601867 keV test:0.1870953832  time:0.42089057 s
+Iteration 9  E:1.991785847 MeV G:183.7844425 keV test:0.0227294015  time:0.4147145749 s
+Iteration 10  E:1.895875642 MeV G:874.0158408 keV test:0.3223009318  time:0.4196246021 s
+Iteration 11  E:2.673297257 MeV G:1607.707522 keV test:0.403345944  time:0.416612032 s
+Iteration 12  E:2.805179993 MeV G:1380.331423 keV test:0.07135069015  time:0.417833386 s
+Iteration 13  E:1.850012705 MeV G:834.8160297 keV test:0.03615706602  time:0.4180911011 s
+Iteration 14  E:2.833962431 MeV G:1561.842145 keV test:0.05777626117  time:0.418941609 s
+Iteration 15  E:2.913147157 MeV G:1396.479455 keV test:0.1541016342  time:0.414932435 s
+Iteration 16  E:2.743591942 MeV G:1487.580372 keV test:0.07444965557  time:0.4191086331 s
+Iteration 17  E:2.724571723 MeV G:1618.201301 keV test:0.34798309  time:0.416902928 s
+Iteration 18  E:2.788748722 MeV G:1445.10512 keV test:0.08977205069  time:0.421162913 s
+Iteration 19  E:2.811596956 MeV G:1501.137248 keV test:0.07537149524  time:0.4210764 s
+Iteration 20  E:2.793094974 MeV G:1359.088377 keV test:0.2014391018  time:0.4196816289 s
+Iteration 21  E:2.888594584 MeV G:1423.946753 keV test:0.18447461  time:0.418631846 s
+Iteration 22  E:2.690236606 MeV G:1388.558323 keV test:0.06593915641  time:0.417917855 s
+Iteration 23  E:1.861705141 MeV G:814.5810318 keV test:0.3587305877  time:0.4224629761 s
+Iteration 24  E:2.849526413 MeV G:1314.73939 keV test:0.04162904331  time:0.419816102 s
+Iteration 25  E:2.818829654 MeV G:1304.776678 keV test:0.1012833086  time:0.421724829 s
+Iteration 26  E:2.684662366 MeV G:1384.452576 keV test:0.1127095383  time:0.4230051549 s
+Iteration 27  E:3.309958662 MeV G:207.265203 keV test:0.4445538028  time:0.426300597 s
+Iteration 28  E:2.287238201 MeV G:734.1436336 keV test:0.2301843414  time:0.4170247969 s
+Iteration 29  E:2.067745826 MeV G:949.7376922 keV test:0.126223858  time:0.424106334 s
+Iteration 30  E:2.058392576 MeV G:885.1920107 keV test:0.04463166711  time:0.420536697 s
+Iteration 31  E:2.064703324 MeV G:840.6288262 keV test:0.1013648138  time:0.422047134 s
+Iteration 32  E:2.060708131 MeV G:872.7802526 keV test:0.04639292662  time:0.421802234 s
+Iteration 33  E:2.064248441 MeV G:898.0637311 keV test:0.02786405624  time:0.423495617 s
+Iteration 34  E:2.064330275 MeV G:890.6230107 keV test:0.02206393799  time:0.4185938351 s
+Iteration 35  E:2.080504952 MeV G:898.1342231 keV test:0.04265457472  time:0.423652531 s
+Iteration 36  E:2.093952296 MeV G:912.7078506 keV test:0.02483436145  time:0.423365111 s
+Iteration 37  E:2.093780677 MeV G:912.5697489 keV test:0.003835650736  time:0.421649577 s
+Iteration 38  E:2.087452037 MeV G:907.1660966 keV test:0.03043518532  time:0.4185801001 s
+Iteration 39  E:2.096153674 MeV G:907.8494422 keV test:0.08419163459  time:0.4232688111 s
+Iteration 40  E:2.099189153 MeV G:912.7717185 keV test:0.02173238032  time:0.424472061 s
+Iteration 41  E:2.098058242 MeV G:911.3513406 keV test:0.02311285863  time:0.4239879821 s
+Iteration 42  E:2.098244383 MeV G:910.5018178 keV test:0.005243103812  time:0.424322481 s
+Iteration 43  E:2.086180809 MeV G:917.4352678 keV test:0.06151651309  time:0.419015629 s
+Iteration 44  E:2.122754808 MeV G:902.8666625 keV test:0.02735524711  time:0.423528067 s
+Iteration 45  E:2.121958737 MeV G:914.0501663 keV test:0.02994946756  time:0.4191764911 s
+Iteration 46  E:2.153920239 MeV G:930.6353888 keV test:0.06258562837  time:0.423802614 s
+Iteration 47  E:2.133643323 MeV G:878.698981 keV test:0.05288104915  time:0.423626443 s
+Iteration 48  E:2.120126835 MeV G:886.8896372 keV test:0.008836126894  time:0.420061394 s
+Iteration 49  E:2.119810357 MeV G:883.5132406 keV test:0.01925805439  time:0.4236779091 s
+Iteration 50  E:2.124962114 MeV G:892.2156799 keV test:0.04171353441  time:0.429128341 s
+Iteration 51  E:2.124688224 MeV G:887.4115923 keV test:0.005200773255  time:0.420534843 s
+Iteration 52  E:2.124182068 MeV G:886.803625 keV test:0.02798563777  time:0.4259706989 s
+Iteration 53  E:2.124344591 MeV G:891.7259464 keV test:0.02224111037  time:0.425412419 s
+Iteration 54  E:2.124063903 MeV G:891.2273114 keV test:0.007344070326  time:0.4227984081 s
+Iteration 55  E:2.12427882 MeV G:891.1672228 keV test:0.004881914155  time:0.4236298089 s
+Iteration 56  E:2.124834071 MeV G:890.4800832 keV test:0.02792544043  time:0.425045681 s
+Iteration 57  E:2.122699874 MeV G:893.4329455 keV test:0.02645796067  time:0.426288104 s
+Iteration 58  E:2.124046907 MeV G:890.5104584 keV test:0.01560253196  time:0.4251870159 s
+Iteration 59  E:2.124078149 MeV G:893.1328927 keV test:0.01129038215  time:0.42885097 s
+Iteration 60  E:2.124229507 MeV G:892.7460926 keV test:0.009653229671  time:0.424290681 s
+Iteration 61  E:2.125104111 MeV G:893.6169099 keV test:0.01560243396  time:0.4261812241 s
+Iteration 62  E:2.12530181 MeV G:893.0441025 keV test:0.004076399374  time:0.466627777 s
+Iteration 63  E:2.124998159 MeV G:893.4783906 keV test:0.005766162586  time:0.46609759 s
+Iteration 64  E:2.124931417 MeV G:893.6301744 keV test:0.002352640702  time:0.454364502 s
+Iteration 65  E:2.124995665 MeV G:893.7007277 keV test:0.002098985593  time:0.451156605 s
+Iteration 66  E:2.124977634 MeV G:893.6912532 keV test:0.001368485962  time:0.451103354 s
+Iteration 67  E:2.124967781 MeV G:893.7189531 keV test:0.001807415953  time:0.46680542 s
+Iteration 68  E:2.124975323 MeV G:893.7086707 keV test:0.0004311908249  time:0.441557628 s
+Iteration 69  E:2.124964455 MeV G:893.6864911 keV test:0.001513848111  time:0.4246326641 s
+Iteration 70  E:2.12496832 MeV G:893.7463537 keV test:0.00143029647  time:0.4251060541 s
+Iteration 71  E:2.124956683 MeV G:893.7524892 keV test:0.0006029669009  time:0.423690554 s
+Iteration 72  E:2.124926516 MeV G:893.7164145 keV test:0.004046019668  time:0.429423988 s
+Iteration 73  E:2.124934239 MeV G:893.6926283 keV test:0.0006351067444  time:0.4678444121 s
+Iteration 74  E:2.12494783 MeV G:893.6761954 keV test:0.003867039232  time:0.4501947979 s
+Iteration 75  E:2.12494182 MeV G:893.7643509 keV test:0.002738476307  time:0.454440956 s
+Iteration 76  E:2.124937935 MeV G:893.7528601 keV test:0.0004327093577  time:0.435298656 s
+Iteration 77  E:2.124934694 MeV G:893.7455551 keV test:0.001634355615  time:0.427211451 s
+Iteration 78  E:2.124934447 MeV G:893.7495998 keV test:0.0006176644815  time:0.434444612 s
+Iteration 79  E:2.12493434 MeV G:893.7507228 keV test:0.0001492501555  time:0.427648101 s
+Iteration 80  E:2.12493124 MeV G:893.7502578 keV test:0.0008694004077  time:0.432108191 s
+Iteration 81  E:2.124929902 MeV G:893.7580676 keV test:0.0008543471749  time:0.428816697 s
+Iteration 82  E:2.124929717 MeV G:893.75741 keV test:0.0001716180433  time:0.4290736699 s
+Iteration 83  E:2.124929751 MeV G:893.7568657 keV test:0.0002109100797  time:0.435057363 s
+Iteration 84  E:2.124928977 MeV G:893.756262 keV test:0.0004761496297  time:0.431905741 s
+Iteration 85  E:2.124929606 MeV G:893.7590924 keV test:0.0004332705865  time:0.431357572 s
+Iteration 86  E:2.124929678 MeV G:893.7610475 keV test:0.0005328564916  time:0.433194233 s
+Iteration 87  E:2.124930544 MeV G:893.7572051 keV test:0.0002613348274  time:0.4324798901 s
+Iteration 88  E:2.124930942 MeV G:893.7565105 keV test:0.0001845245588  time:0.429998748 s
+Iteration 89  E:2.124931402 MeV G:893.7564426 keV test:0.0001621194567  time:0.478986691 s
+Iteration 90  E:2.124931638 MeV G:893.7529416 keV test:0.0003737662917  time:0.4409038901 s
+Iteration 91  E:2.124931379 MeV G:893.7548085 keV test:0.000328193433  time:0.441382951 s
+Iteration 92  E:2.124931446 MeV G:893.754769 keV test:3.121035312e-05  time:0.4409947 s
+Iteration 93  E:2.124931462 MeV G:893.7547695 keV test:4.147539716e-05  time:0.446975328 s
+Iteration 94  E:2.124931491 MeV G:893.7548689 keV test:0.0001451244523  time:0.446988203 s
+Iteration 95  E:2.124931457 MeV G:893.7548632 keV test:6.319183783e-05  time:0.442627309 s
+Iteration 96  E:2.124931405 MeV G:893.7547335 keV test:6.547711989e-05  time:0.4420844381 s
+Iteration 97  E:2.124931417 MeV G:893.7547588 keV test:8.101944934e-05  time:0.447104482 s
+Iteration 98  E:2.124931361 MeV G:893.7547132 keV test:5.872341512e-05  time:0.447155127 s
+Iteration 99  E:2.124931365 MeV G:893.7547013 keV test:3.297447195e-05  time:0.445676389 s
+Iteration 100  E:2.124931367 MeV G:893.7546938 keV test:7.72013352e-06  time:0.4486300179 s
+Iteration 101  E:2.124931367 MeV G:893.7546933 keV test:1.689019463e-05  time:0.449255403 s
+Iteration 102  E:2.124931367 MeV G:893.7546977 keV test:2.923944019e-05  time:0.4495212639 s
+Iteration 103  E:2.124931367 MeV G:893.754699 keV test:2.168618678e-05  time:0.4468696909 s
+Iteration 104  E:2.124931368 MeV G:893.7546978 keV test:1.474900679e-06  time:0.44847601 s
+Iteration 105  E:2.12493137 MeV G:893.7546901 keV test:1.793408643e-05  time:0.4503846349 s
+Iteration 106  E:2.124931368 MeV G:893.754687 keV test:4.683026793e-05  time:0.453783863 s
+Iteration 107  E:2.124931364 MeV G:893.7547112 keV test:0.0001149941775  time:0.4561585761 s
+Iteration 108  E:2.124931369 MeV G:893.7546541 keV test:8.221709144e-05  time:0.4519317331 s
+Iteration 109  E:2.124931373 MeV G:893.7546848 keV test:9.111296885e-06  time:0.453870857 s
+Iteration 110  E:2.124931373 MeV G:893.7546859 keV test:7.70358712e-06  time:0.4608672439 s
+Iteration 111  E:2.124931373 MeV G:893.7546857 keV test:8.251812422e-06  time:0.466849154 s
+Iteration 112  E:2.124931373 MeV G:893.7546863 keV test:1.880987194e-05  time:0.464101491 s
+Iteration 113  E:2.124931371 MeV G:893.7546876 keV test:1.234513528e-05  time:0.45929048 s
+Iteration 114  E:2.124931373 MeV G:893.7546852 keV test:4.949190311e-06  time:0.463773745 s
+Iteration 115  E:2.124931373 MeV G:893.7546857 keV test:1.397710365e-05  time:0.499662623 s
+Iteration 116  E:2.124931373 MeV G:893.7546857 keV test:1.700631964e-06  time:0.468952266 s
+Iteration 117  E:2.124931373 MeV G:893.7546857 keV test:2.550337231e-06  time:0.5144546781 s
+Iteration 118  E:2.124931373 MeV G:893.7546856 keV test:4.236270331e-06  time:0.501517218 s
+Iteration 119  E:2.124931373 MeV G:893.7546859 keV test:3.061533209e-06  time:0.470574284 s
+Iteration 120  E:2.124931373 MeV G:893.7546858 keV test:1.591063045e-06  time:0.4699541189 s
+Iteration 121  E:2.124931373 MeV G:893.7546858 keV test:6.190497743e-07  time:0.470859851 s
+Iteration 122  E:2.124931373 MeV G:893.7546858 keV test:3.391510802e-06  time:0.471139867 s
+Iteration 123  E:2.124931373 MeV G:893.7546857 keV test:4.051234782e-07  time:0.471765543 s
+Iteration 124  E:2.124931373 MeV G:893.7546858 keV test:1.96621592e-07  time:0.509433023 s
+Iteration 125  E:2.124931373 MeV G:893.7546858 keV test:2.305152946e-07  time:0.512345847 s
+Iteration 126  E:2.124931373 MeV G:893.7546838 keV test:6.537834835e-07  time:0.506900525 s
+Iteration 127  E:2.124931373 MeV G:893.7546858 keV test:1.027498109e-07  time:0.501517189 s
+Iteration 128  E:2.124931373 MeV G:893.7546857 keV test:3.366559558e-07  time:0.4791085511 s
+Iteration 129  E:2.124931373 MeV G:893.7546851 keV test:3.020201591e-07  time:0.4796355111 s
+Iteration 130  E:2.124931373 MeV G:893.7546858 keV test:2.62972095e-07  time:0.479925356 s
+Iteration 131  E:2.124931373 MeV G:893.7546858 keV test:1.202606623e-07  time:0.4830987491 s
+Iteration 132  E:2.124931373 MeV G:893.7546857 keV test:4.067327001e-08  time:0.479404006 s
+Iteration 133  E:2.124931373 MeV G:893.7546858 keV test:1.383422895e-08  time:0.4839674521 s
+Iteration 134  E:2.124931373 MeV G:893.7546858 keV test:1.913726441e-08  time:0.514413583 s
+Iteration 135  E:2.124931373 MeV G:893.7546858 keV test:3.326444836e-08  time:0.503819556 s
+Iteration 136  E:2.124931373 MeV G:893.7546858 keV test:2.101291184e-08  time:0.492731591 s
+Iteration 137  E:2.124931373 MeV G:893.7546858 keV test:6.398548862e-09  time:0.4980992159 s
+Iteration 138  E:2.124931373 MeV G:893.7546858 keV test:2.308340486e-09  time:0.49837772 s
+Iteration 139  E:2.124931373 MeV G:893.7546857 keV test:2.61147284e-09  time:0.4923644811 s
+Iteration 140  E:2.124931373 MeV G:893.7546858 keV test:8.422784639e-09  time:0.493087749 s
+Iteration 141  E:2.124931373 MeV G:893.7546858 keV test:2.349400725e-08  time:0.5187374681 s
+Iteration 142  E:2.124931373 MeV G:893.7546858 keV test:1.581041929e-08  time:0.500067396 s
+Iteration 143  E:2.124931373 MeV G:893.7546855 keV test:7.458794837e-09  time:0.500769655 s
+Iteration 144  E:2.124931373 MeV G:893.7546858 keV test:1.145839014e-09  time:0.500830929 s
+Iteration 145  E:2.124931373 MeV G:893.7546858 keV test:5.298521937e-09  time:0.498845018 s
+Iteration 146  E:2.124931373 MeV G:893.7546861 keV test:2.134884105e-09  time:0.50045304 s
+Iteration 147  E:2.124931373 MeV G:893.7546858 keV test:1.029548073e-09  time:0.504810904 s
+Iteration 148  E:2.124931373 MeV G:893.7546858 keV test:8.95355674e-10  time:0.5058346931 s
+Iteration 149  E:2.124931373 MeV G:893.7546859 keV test:4.220948178e-10  time:0.508099927 s
+Iteration 150  E:2.124931373 MeV G:893.7546858 keV test:4.963118376e-10  time:0.507940928 s
+Iteration 151  E:2.124931373 MeV G:893.7546858 keV test:1.707118685e-10  time:0.5196301191 s
+Iteration 152  E:2.124931373 MeV G:893.7546858 keV test:3.161630694e-10  time:0.50783011 s
+Iteration 153  E:2.124931373 MeV G:893.7546858 keV test:5.438208339e-09  time:0.5159589719 s
+Iteration 154  E:2.124931373 MeV G:893.7546858 keV test:1.061996469e-09  time:0.521191914 s
+Iteration 155  E:2.124931373 MeV G:893.7546859 keV test:1.75880909e-10  time:0.517088354 s
+Iteration 156  E:2.124931373 MeV G:893.7546859 keV test:3.612759203e-10  time:0.551450982 s
+Iteration 157  E:2.124931373 MeV G:893.7546858 keV test:2.719564031e-10  time:0.52393105 s
+Iteration 158  E:2.124931373 MeV G:893.7546857 keV test:1.119297861e-10  time:0.5295816161 s
+Iteration 159  E:2.124931373 MeV G:893.7546858 keV test:5.709492657e-11  time:0.521929851 s
+
+
+Expectation values
+------------------
+
+|J^2.PSI - J(J+1).PSI|oo = 6.47719634153409e-12
+
+|H.PSI - E.PSI|oo = 1.20865885702703e-09
+
+<T> = (0.0681135133438598,-0.0153558324079945)
+
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (HO expansion)
+<PSI|(pi.pj)/M[core]|PSI> = (0,0) MeV (R cut)
+
+E:(2.12493137302968,-0.44687734290097)  J Pi:2+
+
+
+
+
+Spectrum
+--------
+
+Z:3 N:3   J Pi (index):1+(0)   E:-2.52458492932445 MeV G:0.0330730232462794 keV   E:0 MeV G:0.0330730232462794 keV
+Z:3 N:3   J Pi (index):3+(0)   E:-1.24388858198183 MeV G:9.54665094277862e-06 keV   E:1.28069634734262 MeV G:9.54665094277862e-06 keV
+Z:3 N:3   J Pi (index):0+(0)   E:-1.23550935115623 MeV G:0.0112250252879428 keV   E:1.28907557816823 MeV G:0.0112250252879428 keV
+Z:3 N:3   J Pi (index):2+(0)   E:1.22402881823833 MeV G:190.675563320276 keV   E:3.74861374756278 MeV G:190.675563320276 keV
+Z:3 N:3   J Pi (index):2+(1)   E:2.12493137302968 MeV G:893.75468580194 keV   E:4.64951630235414 MeV G:893.75468580194 keV
+Z:3 N:3   J Pi (index):1+(1)   E:2.70291232171462 MeV G:4285.58926342914 keV   E:5.22749725103907 MeV G:4285.58926342914 keV
+
+
+1+(0) GSM vectors calculated for all M values
+----------------------------------------------------
+
+GSM eigenvector 1+(0) (M=1) calculated and stored. Precision : 3.2612801348364e-16
+GSM eigenvector 1+(0) (M<0) calculated and stored
+
+
+1+(1) GSM vectors calculated for all M values
+----------------------------------------------------
+
+GSM eigenvector 1+(1) (M=1) calculated and stored. Precision : 5.39219502382338e-11
+GSM eigenvector 1+(1) (M<0) calculated and stored
+
+
+3+(0) GSM vectors calculated for all M values
+----------------------------------------------------
+
+GSM eigenvector 3+(0) (M=2) calculated and stored. Precision : 8.88178419700125e-16
+GSM eigenvector 3+(0) (M=1) calculated and stored. Precision : 8.88178419700125e-16
+GSM eigenvector 3+(0) (M=0) calculated and stored. Precision : 4.44089209850063e-16
+GSM eigenvector 3+(0) (M<0) calculated and stored
+
+
+0+(0) GSM vectors calculated for all M values
+----------------------------------------------------
+
+
+2+(0) GSM vectors calculated for all M values
+----------------------------------------------------
+
+GSM eigenvector 2+(0) (M=1) calculated and stored. Precision : 3.93574062229619e-14
+GSM eigenvector 2+(0) (M=0) calculated and stored. Precision : 4.82947015711943e-14
+GSM eigenvector 2+(0) (M<0) calculated and stored
+
+
+2+(1) GSM vectors calculated for all M values
+----------------------------------------------------
+
+GSM eigenvector 2+(1) (M=1) calculated and stored. Precision : 1.12188348888585e-11
+GSM eigenvector 2+(1) (M=0) calculated and stored. Precision : 1.37402103583817e-11
+GSM eigenvector 2+(1) (M<0) calculated and stored
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+Eigenvectors calculated. time:772.277391865035 s
+----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
