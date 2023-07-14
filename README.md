@@ -62,10 +62,8 @@ If you got an error, we're sorry, but you'll need to track it down. It likely is
 # Setup runs
 
 If your templates and execuatble are working properly, we can now setup our runs. Since our workflow is (a) run a series of high-fidelity calculations (b) build an emulator from that data and (c) perform Bayesian UQ using the emulator, we are best served having a large number of high-fidelity calculations. Since these can take a while, we recommend using a supercomputing cluster like MSU's High Performance Computing Center (HPCC). With this in mind, we've prepared the python file "run_hpcc_prep.py" which has the following arguments that can be adjusted based on your parallelization needs:
-\begin{enumerate}
-    \item mpiProcesses
-    \item openMPthreads
-\end{enumerate}
+ - mpiProcesses
+ - openMPthreads
 These two are the number of mpi tasks and OpenMP threads which will need to be the same as in the sbatch_run.sb file.
 
 We can run the setup script on the hpcc using:
