@@ -3,6 +3,8 @@
 Created on Thu Jul 13 15:38:39 2023
 
 @author: 1josh
+
+This script is used to prepare input files for runs on the HPCC.
 """
 import numpy as np
 import scipy.stats as sps
