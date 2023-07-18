@@ -1,3 +1,7 @@
+'''
+This script is used to test that GSM_exe executable is working correctly with the given templates.
+'''
+
 import numpy as np
 import scipy.stats as sps
 import sys, os
