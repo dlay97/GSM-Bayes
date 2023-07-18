@@ -3,6 +3,8 @@
 Created on Fri Jul 14 08:40:05 2023
 
 @author: 1josh
+
+This script is used to collect all data from the HPCC for the high-fidelity calculations which will be used to create our simple emulator.
 """
 import numpy as np
 import sys, os
