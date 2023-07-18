@@ -3,6 +3,8 @@
 Created on Wed Jul 12 15:23:03 2023
 
 @author: 1josh
+
+This script is used to generate our emulator, run bayesian callibration, and create our corner plot.
 """
 
 from surmise.emulation import emulator
