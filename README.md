@@ -104,6 +104,12 @@ $ bayesian_run.py
 to make our emulator and perform Bayesian callibration with it. The output will be a corner plot showing each of our input parameters. If you'd like to do more with this, you certianly can!
 
 
+# Citing this repository
+
+If you would like to cite this repository, please either click the "cite this repository" button or use: Joshua Wylie and Daniel Lay. Uncertainty quantification in the Gamow Shell Model, July
+2023. URL https://github.com/dlay97/GSM-Bayes.
+
+
 
 
 
